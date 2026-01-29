@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background">
       {/* Background Watermark - Optimized for aesthetic appeal */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden z-0">
-        <LotusLogo className="w-[120vw] h-[120vw] md:w-[800px] md:h-[800px] text-[var(--logo-teal)] opacity-[0.03] rotate-12" />
+        <LotusLogo className="w-[120vw] h-[120vw] md:w-[800px] md:h-[800px] text-[var(--logo-teal)] opacity-[0.06] rotate-12" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-5xl">
@@ -38,8 +38,9 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="relative space-y-8 text-lg md:text-xl leading-relaxed text-foreground max-w-4xl mx-auto text-left md:text-center bg-white/60 backdrop-blur-md p-10 md:p-14 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/80"
         >
-            {/* Decorative quotation mark */}
+            {/* Decorative quotation marks */}
             <div className="absolute -top-6 -left-4 md:-left-8 text-6xl text-secondary/30 font-serif">“</div>
+            <div className="absolute -bottom-8 -right-4 md:-right-8 text-6xl text-secondary/30 font-serif rotate-180">“</div>
             
           <p className="text-foreground/90">
             You don't need to have a "problem" to seek help. Sometimes, life just feels heavy - and it's okay to reach out. We all go through moments and situations that confuse, overwhelm or exhaust us, often making us question everything around.
