@@ -10,7 +10,7 @@ export default function ContactPage() {
       <motion.h1 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground"
+        className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground font-serif"
       >
         Contact
       </motion.h1>
@@ -23,7 +23,7 @@ export default function ContactPage() {
           className="space-y-8"
         >
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-secondary-foreground">Get in Touch</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-secondary-foreground font-serif">Get in Touch</h2>
             <p className="text-foreground-muted mb-6">
               If you have any questions or would like to schedule a consultation, please feel free to reach out.
             </p>
@@ -63,7 +63,7 @@ export default function ContactPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-secondary-foreground">Location</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-secondary-foreground font-serif">Location</h2>
             <div className="flex items-start gap-3 text-foreground group">
               <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
                 <MapPin className="w-5 h-5 text-secondary-foreground" />
@@ -85,7 +85,7 @@ export default function ContactPage() {
           transition={{ delay: 0.4 }}
           className="bg-white p-8 rounded-3xl shadow-sm border border-secondary/20"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-secondary-foreground">Schedule a Session</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-secondary-foreground font-serif">Schedule a Session</h2>
           <p className="text-foreground-muted mb-6">
             Ready to start your journey? You can book a session directly through the calendar below.
           </p>
