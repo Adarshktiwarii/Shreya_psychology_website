@@ -4,12 +4,17 @@
   /* Warm Off-White */
   --background: #FAFAF7;
   
-  /* Text: Soft Grey - STRICTLY #A9A9A9 as requested */
-  --foreground: #A9A9A9;
+  /* Text: Soft Grey - Adjusted to be slightly darker for better readability while maintaining the grey aesthetic.
+     Original Request: #A9A9A9 (Light Grey)
+     New Darker Shade: #757575 (Medium Grey - keeps the neutral tone but improves contrast significantly) 
+  */
+  --foreground: #757575;
   
-  /* Additional darker grey for essential readability ONLY where absolutely necessary (e.g., small print) 
-     but defaulting main content to the requested color. */
-  --foreground-dark: #6B7280; 
+  /* Muted variant for less important text (closer to original request) */
+  --foreground-muted: #A9A9A9;
+  
+  /* Darker grey for essential readability (unchanged mostly, but useful for headings) */
+  --foreground-dark: #4a4a4a; 
   
   /* Pastel Blue */
   --primary: #DDEFF4;
@@ -30,6 +35,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
   --color-foreground-dark: var(--foreground-dark);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
