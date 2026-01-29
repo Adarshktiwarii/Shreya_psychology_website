@@ -41,9 +41,6 @@ export function Hero() {
             {/* Decorative quotation mark */}
             <div className="absolute -top-6 -left-4 md:-left-8 text-6xl text-secondary/30 font-serif">“</div>
             
-          <p className="font-medium text-2xl text-[var(--logo-teal)] mb-6 tracking-wide">
-            Hi, I am Shreya Raghuwanshi, a Licensed Clinical Psychologist.
-          </p>
           <p className="text-foreground/90">
             You don't need to have a "problem" to seek help. Sometimes, life just feels heavy - and it's okay to reach out. We all go through moments and situations that confuse, overwhelm or exhaust us, often making us question everything around.
           </p>
