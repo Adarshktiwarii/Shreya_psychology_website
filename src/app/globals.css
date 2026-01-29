@@ -3,39 +3,47 @@
 :root {
   /* Warm Off-White */
   --background: #FAFAF7;
-  /* Soft Grey - User requested #A9A9A9, but using #666666 for main text readability while keeping the aesthetic. 
-     I will add a specific utility for the lighter grey if needed. */
-  --foreground: #666666; 
+  
+  /* Soft Grey - User requested #A9A9A9 */
+  /* Using a slightly darker shade for main text to ensure readability (WCAG), 
+     while keeping the requested #A9A9A9 for lighter elements/muted text */
+  --foreground: #6B7280; /* Neutral gray, readable */
+  --foreground-muted: #A9A9A9;
   
   /* Pastel Blue */
   --primary: #DDEFF4;
-  --primary-foreground: #4A6fa5; /* Darker blue for text on primary */
+  --primary-foreground: #4A6FA5;
   
-  /* Soft Blush Pink (Darker shade as requested) */
-  --secondary: #edd6d4;
-  --secondary-foreground: #5d4037;
+  /* Soft Blush Pink (Slightly darker shade of #F3D6D0) */
+  --secondary: #EAC0B8; 
+  --secondary-foreground: #5D4037;
   
   /* Sage Green */
   --accent: #C9DCCB;
-  --accent-foreground: #2d3e2e;
-  
-  --muted-text: #A9A9A9;
+  --accent-foreground: #2D3E2E;
+
+  /* Muted Teal for Logo (approximated based on description as no hex provided) */
+  --logo-teal: #7DA2A9; 
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-muted-text: var(--muted-text);
+  --color-logo-teal: var(--logo-teal);
+  
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X, Flower } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { LotusLogo } from "@/components/layout/Logo";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -17,22 +18,23 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-background/80 sticky top-0 z-50 w-full backdrop-blur-sm border-b border-gray-100">
+    <nav className="bg-background/90 sticky top-0 z-50 w-full backdrop-blur-md border-b border-secondary/20 shadow-sm transition-all duration-300">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            {/* Placeholder for the Icon version of the logo */}
-            <Flower className="h-8 w-8 text-[#7da2a9]" /> {/* Muted Teal approx */}
-            <span className="text-xl font-bold text-foreground">ManoArohan</span>
+        <div className="flex h-20 items-center justify-between">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <LotusLogo className="h-10 w-10 text-[var(--logo-teal)] transition-transform group-hover:scale-105 duration-300" />
+            <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-primary-foreground transition-colors duration-300">
+              ManoArohan
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-foreground hover:text-[#7da2a9] transition-colors"
+                className="text-base font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-teal)] after:transition-all hover:after:w-full"
               >
                 {link.name}
               </Link>
@@ -41,7 +43,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-foreground hover:bg-secondary/20 rounded-full transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -52,13 +54,13 @@ export function Navbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-background">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="md:hidden border-t border-secondary/20 bg-background/95 backdrop-blur-md absolute w-full shadow-lg">
+          <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium hover:text-[#7da2a9] transition-colors"
+                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

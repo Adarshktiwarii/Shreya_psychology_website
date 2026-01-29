@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function ServicesPage() {
   const services = [
     {
@@ -26,30 +30,63 @@ export default function ServicesPage() {
     }
   ];
 
-  return (
-    <div className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
-        Services
-      </h1>
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
-      <div className="grid gap-8 md:grid-cols-2">
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <div className="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground"
+      >
+        Services
+      </motion.h1>
+
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+      >
         {services.map((service, index) => (
-          <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold mb-4 text-secondary-foreground">
+          <motion.div 
+            key={index} 
+            variants={item}
+            className="bg-white p-8 rounded-2xl shadow-sm border border-secondary/20 hover:shadow-lg hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 group"
+          >
+            <h3 className="text-xl font-bold mb-4 text-secondary-foreground group-hover:text-primary-foreground transition-colors">
               {service.title}
             </h3>
-            <p className="text-foreground/80 leading-relaxed">
+            <p className="text-foreground leading-relaxed">
               {service.description}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="mt-16 text-center p-6 bg-accent/30 rounded-xl">
-        <p className="text-xl font-medium text-foreground">
-          Sessions are available in both in-person and online formats
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="mt-16 text-center p-8 bg-gradient-to-r from-accent/20 to-primary/20 rounded-2xl shadow-inner"
+      >
+        <p className="text-2xl font-medium text-foreground">
+          Sessions are available in both <span className="text-primary-foreground font-bold">in-person</span> and <span className="text-primary-foreground font-bold">online</span> formats
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }
