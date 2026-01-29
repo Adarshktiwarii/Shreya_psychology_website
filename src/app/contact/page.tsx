@@ -1,5 +1,5 @@
 import { CalendlyEmbed } from "@/components/booking/CalendlyEmbed";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -16,14 +16,31 @@ export default function ContactPage() {
               If you have any questions or would like to schedule a consultation, please feel free to reach out.
             </p>
             
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 text-foreground/80">
-                <Mail className="w-5 h-5 text-secondary-foreground" />
-                <a href="mailto:contact@manoarohan.com" className="hover:text-primary transition-colors">
-                  contact@manoarohan.com
+            <div className="space-y-6">
+              <div className="flex items-start gap-3 text-foreground/80">
+                <Mail className="w-5 h-5 text-secondary-foreground mt-1" />
+                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[#7da2a9] transition-colors">
+                  shreya.mhealth@gmail.com
                 </a>
               </div>
-              {/* Add more contact info if provided later */}
+              
+              <div className="flex items-start gap-3 text-foreground/80">
+                <Phone className="w-5 h-5 text-secondary-foreground mt-1" />
+                <div className="flex flex-col">
+                  <a href="tel:+918982108778" className="hover:text-[#7da2a9] transition-colors">
+                    +91 8982108778
+                  </a>
+                  <span className="text-sm text-muted-text">(Available on WhatsApp)</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 text-foreground/80">
+                <Clock className="w-5 h-5 text-secondary-foreground mt-1" />
+                <div className="flex flex-col">
+                  <span>Mon - Fri: 10:00 AM - 6:00 PM</span>
+                  <span>Sat: 10:00 AM - 2:00 PM</span>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -31,9 +48,12 @@ export default function ContactPage() {
             <h2 className="text-2xl font-semibold mb-4">Location</h2>
             <div className="flex items-start gap-3 text-foreground/80">
               <MapPin className="w-5 h-5 text-secondary-foreground mt-1" />
-              <div>
+              <div className="space-y-2">
                 <p>Sessions are available in both in-person and online formats.</p>
-                {/* Specific address can be added here */}
+                <p className="font-medium text-foreground">
+                  Near D.E.O Office, A.B Road,<br/>
+                  Guna, Madhya Pradesh
+                </p>
               </div>
             </div>
           </section>

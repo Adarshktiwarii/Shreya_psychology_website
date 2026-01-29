@@ -42,11 +42,11 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:contact@manoarohan.com" className="hover:text-[#7da2a9]">contact@manoarohan.com</a>
+                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[#7da2a9]">shreya.mhealth@gmail.com</a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Available Online & In-Person</span>
+                <span>Guna, Madhya Pradesh</span>
               </li>
               <li className="flex items-center gap-4 mt-4">
                 <a href="#" className="hover:text-[#7da2a9]"><Instagram className="h-5 w-5" /></a>
