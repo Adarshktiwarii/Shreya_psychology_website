@@ -28,13 +28,13 @@ export default function ForYouPage() {
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl rounded-full -z-10"></div>
           
-          <div className="space-y-6 max-w-4xl mx-auto">
-            <p className="text-3xl md:text-5xl text-foreground font-serif leading-tight">
-              When life feels heavy, <br className="hidden md:block"/>
+          <div className="space-y-4 max-w-4xl mx-auto">
+            <p className="text-3xl md:text-5xl text-foreground font-serif leading-snug">
+              When life feels heavy,
+              <br />
               and the reasons why seem just out of reach...
-            </p>
-            <p className="text-2xl md:text-4xl text-[var(--logo-teal)] font-serif italic">
-               ...this space is held for you.
+              <br />
+              <span className="text-[var(--logo-teal)] italic">...this space is held for you.</span>
             </p>
           </div>
 
