@@ -28,12 +28,17 @@ export default function ForYouPage() {
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl rounded-full -z-10"></div>
           
-          <p className="text-2xl md:text-4xl text-foreground font-serif leading-tight">
-            If life has been feeling a little heavy — <br className="hidden md:block"/>
-            <span className="text-[var(--logo-teal)] italic">even if you can’t fully explain why</span> — <br className="hidden md:block"/>
-            this space is for you.
-          </p>
-          <p className="text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto leading-relaxed">
+          <div className="space-y-6 max-w-4xl mx-auto">
+            <p className="text-3xl md:text-5xl text-foreground font-serif leading-tight">
+              When life feels heavy, <br className="hidden md:block"/>
+              and the reasons why seem just out of reach...
+            </p>
+            <p className="text-2xl md:text-4xl text-[var(--logo-teal)] font-serif italic">
+               ...this space is held for you.
+            </p>
+          </div>
+
+          <p className="text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto leading-relaxed pt-8">
             You don’t need to be in crisis to seek support, and you don’t need to arrive with everything clearly defined. Sometimes emotions feel overwhelming, confusing, or simply difficult to carry alone. That, in itself, is reason enough to reach out.
           </p>
         </motion.section>
