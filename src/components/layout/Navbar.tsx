@@ -1,15 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X, Sunrise } from "lucide-react";
+import { Menu, X, Flower } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "For You", href: "/for-you" },
+  { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
-  { name: "Therapy Services", href: "/therapy" },
-  { name: "Diagnosis", href: "/diagnosis" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -20,8 +21,9 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Sunrise className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">Mano Arohan</span>
+            {/* Placeholder for the Icon version of the logo */}
+            <Flower className="h-8 w-8 text-[#7da2a9]" /> {/* Muted Teal approx */}
+            <span className="text-xl font-bold text-foreground">ManoArohan</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -30,17 +32,11 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-foreground hover:text-[#7da2a9] transition-colors"
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/book"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium transition-colors"
-            >
-              Book a Session
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,19 +58,12 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium hover:text-primary transition-colors"
+                className="text-sm font-medium hover:text-[#7da2a9] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/book"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium text-center transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Book a Session
-            </Link>
           </div>
         </div>
       )}

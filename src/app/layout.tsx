@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CalendlyFloatingButton } from "@/components/booking/CalendlyFloatingButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mano Arohan | Clinical Psychology & Therapy",
-  description: "Ascent of the Mind. Professional clinical psychology services for mental growth and well-being. Individual therapy, couples counselling, and assessments.",
+  title: "ManoArohan | Clinical Psychology & Therapy",
+  description: "Ascent of the Mind. Professional clinical psychology services for mental growth and well-being.",
 };
 
 export default function RootLayout({
@@ -35,7 +34,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <CalendlyFloatingButton />
       </body>
     </html>
   );

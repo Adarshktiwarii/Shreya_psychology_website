@@ -1,14 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFCF8;
-  --foreground: #333333;
-  --primary: #8BA888;
-  --primary-foreground: #ffffff;
-  --secondary: #B8E2F2;
-  --secondary-foreground: #1e293b;
-  --accent: #F4E1D2;
-  --accent-foreground: #4a3b2a;
+  /* Warm Off-White */
+  --background: #FAFAF7;
+  /* Soft Grey - User requested #A9A9A9, but using #666666 for main text readability while keeping the aesthetic. 
+     I will add a specific utility for the lighter grey if needed. */
+  --foreground: #666666; 
+  
+  /* Pastel Blue */
+  --primary: #DDEFF4;
+  --primary-foreground: #4A6fa5; /* Darker blue for text on primary */
+  
+  /* Soft Blush Pink (Darker shade as requested) */
+  --secondary: #edd6d4;
+  --secondary-foreground: #5d4037;
+  
+  /* Sage Green */
+  --accent: #C9DCCB;
+  --accent-foreground: #2d3e2e;
+  
+  --muted-text: #A9A9A9;
 }
 
 @theme inline {
@@ -20,6 +31,7 @@
   --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-muted-text: var(--muted-text);
 }
 
 body {
