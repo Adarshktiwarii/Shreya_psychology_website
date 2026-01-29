@@ -4,11 +4,12 @@
   /* Warm Off-White */
   --background: #FAFAF7;
   
-  /* Soft Grey - User requested #A9A9A9 */
-  /* Using a slightly darker shade for main text to ensure readability (WCAG), 
-     while keeping the requested #A9A9A9 for lighter elements/muted text */
-  --foreground: #6B7280; /* Neutral gray, readable */
-  --foreground-muted: #A9A9A9;
+  /* Text: Soft Grey - STRICTLY #A9A9A9 as requested */
+  --foreground: #A9A9A9;
+  
+  /* Additional darker grey for essential readability ONLY where absolutely necessary (e.g., small print) 
+     but defaulting main content to the requested color. */
+  --foreground-dark: #6B7280; 
   
   /* Pastel Blue */
   --primary: #DDEFF4;
@@ -22,14 +23,14 @@
   --accent: #C9DCCB;
   --accent-foreground: #2D3E2E;
 
-  /* Muted Teal for Logo (approximated based on description as no hex provided) */
+  /* Muted Teal for Logo */
   --logo-teal: #7DA2A9; 
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-dark: var(--foreground-dark);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
