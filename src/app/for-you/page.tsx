@@ -30,11 +30,11 @@ export default function ForYouPage() {
           
           <div className="space-y-4 max-w-4xl mx-auto">
             <p className="text-3xl md:text-5xl text-foreground font-serif leading-snug">
-              When life feels heavy,
+              If life has been feeling a little heavy —
               <br />
-              and the reasons why seem just out of reach...
+              <span className="italic">even if you can’t fully explain why</span> —
               <br />
-              <span className="text-[var(--logo-teal)] italic">...this space is held for you.</span>
+              <span className="text-[var(--logo-teal)]">this space is for you.</span>
             </p>
           </div>
 
