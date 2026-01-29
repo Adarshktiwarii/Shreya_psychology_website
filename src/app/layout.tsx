@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Tenor_Sans, Lato } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-const serifFont = Cormorant_Garamond({
-  variable: "--font-serif",
+const headingFont = Tenor_Sans({
+  variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400"],
   display: "swap",
 });
 
-const sansFont = Montserrat({
-  variable: "--font-sans",
+const bodyFont = Lato({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "700"],
   display: "swap",
 });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${serifFont.variable} ${sansFont.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${headingFont.variable} ${bodyFont.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <Navbar />
         <main className="flex-1">

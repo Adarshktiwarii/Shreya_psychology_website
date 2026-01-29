@@ -45,8 +45,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-logo-teal: var(--logo-teal);
   
-  --font-sans: var(--font-sans), Arial, Helvetica, sans-serif;
-  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-body), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-heading), Georgia, serif;
 }
 
 body {
@@ -56,5 +56,5 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
 }
