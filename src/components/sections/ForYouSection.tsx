@@ -22,7 +22,7 @@ export function ForYouSection() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-3xl md:text-6xl font-bold mb-6 text-foreground font-serif">
+        <h2 className="text-3xl md:text-6xl font-bold mb-6 text-[var(--logo-blush)] font-serif">
           Who This Space Is For
         </h2>
       </motion.div>
@@ -44,7 +44,7 @@ export function ForYouSection() {
               <br />
               <span className="italic">even if you can’t fully explain why</span> —
               <br />
-              <span className="text-[var(--logo-teal)]">this space is for you.</span>
+              <span className="text-[var(--logo-blush)]">this space is for you.</span>
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export function ForYouSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold mb-12 text-center text-foreground font-serif"
+            className="text-2xl md:text-3xl font-bold mb-12 text-center text-[var(--logo-blush)] font-serif"
           >
             This space may be helpful for you if…
           </motion.h3>
@@ -82,8 +82,8 @@ export function ForYouSection() {
                 key={i} 
                 className="flex flex-col p-6 bg-white rounded-2xl border border-gray-100 hover:border-[var(--logo-teal)]/30 hover:shadow-lg transition-all duration-300 group h-full"
               >
-                <div className="mb-4 p-3 bg-background rounded-full w-fit group-hover:bg-[var(--logo-teal)]/10 transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-[var(--logo-teal)]" />
+                <div className="mb-4 p-3 bg-background rounded-full w-fit group-hover:bg-[var(--logo-blush)]/10 transition-colors">
+                  <CheckCircle2 className="w-6 h-6 text-[var(--logo-blush)]" />
                 </div>
                 <span className="text-foreground font-medium leading-relaxed">{item}</span>
               </motion.li>
@@ -99,7 +99,7 @@ export function ForYouSection() {
           className="grid md:grid-cols-2 gap-12 items-center"
         >
           <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground font-serif">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[var(--logo-blush)] font-serif">
               Therapy, at your pace
             </h3>
             <div className="space-y-6 text-lg text-foreground-dark leading-relaxed">

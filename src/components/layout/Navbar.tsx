@@ -34,7 +34,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-teal)] after:transition-all hover:after:w-full"
+                className="text-lg font-medium text-foreground hover:text-[var(--logo-blush)] transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-blush)] after:transition-all hover:after:w-full"
               >
                 {link.name}
               </Link>
@@ -60,7 +60,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
+                className="text-lg font-medium text-foreground hover:text-[var(--logo-blush)] transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
