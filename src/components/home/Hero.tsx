@@ -23,16 +23,10 @@ export function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="space-y-10 mb-20"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight">
-            Inner Balance, <br className="hidden md:block" />
-            <span className="text-[var(--logo-teal)] relative inline-block">
-               Outer Growth
-               <svg className="absolute w-full h-3 -bottom-1 left-0 text-secondary/40" viewBox="0 0 100 10" preserveAspectRatio="none">
-                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
-               </svg>
-            </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight whitespace-nowrap">
+            Inner Balance, <span className="text-[var(--logo-teal)]">Outer Growth</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-foreground-muted font-light italic font-serif">
+          <p className="text-2xl md:text-3xl text-foreground-muted font-light italic font-serif whitespace-nowrap overflow-hidden text-ellipsis">
             "Because everyone needs a little help sometimes"
           </p>
           
@@ -50,21 +44,22 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="relative space-y-8 text-lg md:text-xl leading-relaxed text-foreground max-w-4xl mx-auto text-left md:text-center bg-white/60 backdrop-blur-md p-10 md:p-14 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/80"
+          className="relative space-y-8 text-lg md:text-xl leading-relaxed text-foreground max-w-4xl mx-auto text-left bg-white/60 backdrop-blur-md p-10 md:p-14 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/80"
         >
-            {/* Decorative quotation marks */}
-            <div className="absolute -top-6 -left-4 md:-left-8 text-6xl text-secondary/30 font-serif">“</div>
-            <div className="absolute -bottom-8 -right-4 md:-right-8 text-6xl text-secondary/30 font-serif rotate-180">“</div>
-            
-          <p className="text-foreground/90">
-            You don't need to have a "problem" to seek help. Sometimes, life just feels heavy - and it's okay to reach out. We all go through moments and situations that confuse, overwhelm or exhaust us, often making us question everything around.
+          <p className="font-bold text-[var(--logo-teal)] text-2xl mb-4">
+            Hi, I’m Shreya Raghuwanshi, a Licensed Clinical Psychologist.
           </p>
-          <p className="text-foreground/90">
-            Each of us carry experience that shapes us - but they don't define who we are. Healing is not about erasing what you've been through, but about learning to live, understand and grow through it.
-          </p>
-          <p className="text-foreground/90">
-            <span className="font-bold text-[var(--logo-teal)]">ManoArohan</span>, as the name says 'Ascent of the Mind' is here to help you make sense of your emotions and raising awareness from within, one step at a time.
-          </p>
+          <div className="space-y-6 text-foreground/90">
+            <p>
+              You don’t need to have answers or explanations to begin.
+            </p>
+            <p>
+              Sometimes life simply feels heavy or hard to carry alone — and that is reason enough to reach out.
+            </p>
+            <p>
+              <span className="font-bold text-[var(--logo-teal)]">ManoArohan</span> is a space to help you make sense of your emotions and find steadiness again, at your own pace.
+            </p>
+          </div>
         </motion.div>
       </div>
 
