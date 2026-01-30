@@ -53,24 +53,8 @@ export function ForYouSection() {
           </p>
         </motion.div>
 
-        {/* Reassurance Card */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="bg-white p-10 md:p-16 rounded-[2.5rem] shadow-[0_20px_50px_rgb(0,0,0,0.05)] border border-gray-100 relative overflow-hidden"
-        >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
-          
-          <div className="relative z-10 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground font-serif">
-              You don’t have to have it all figured out
-            </h3>
-            {/* Content removed as per user request */}
-          </div>
-        </motion.div>
-
+        {/* Reassurance Card - REMOVED as per user request */}
+        
         {/* Checklist */}
         <div>
           <motion.h3 
