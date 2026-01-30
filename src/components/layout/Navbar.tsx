@@ -8,10 +8,10 @@ import { LotusLogo } from "@/components/layout/Logo";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "For You", href: "/for-you" },
-  { name: "Services", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "For You", href: "#for-you" },
+  { name: "Services", href: "#services" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {

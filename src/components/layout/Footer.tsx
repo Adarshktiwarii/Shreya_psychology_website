@@ -21,10 +21,10 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2 text-sm text-foreground-muted">
               <li><Link href="/" className="hover:text-[var(--logo-teal)] transition-colors">Home</Link></li>
-              <li><Link href="/for-you" className="hover:text-[var(--logo-teal)] transition-colors">For You</Link></li>
-              <li><Link href="/services" className="hover:text-[var(--logo-teal)] transition-colors">Services</Link></li>
-              <li><Link href="/about" className="hover:text-[var(--logo-teal)] transition-colors">About</Link></li>
-              <li><Link href="/contact" className="hover:text-[var(--logo-teal)] transition-colors">Contact</Link></li>
+              <li><Link href="#for-you" className="hover:text-[var(--logo-teal)] transition-colors">For You</Link></li>
+              <li><Link href="#services" className="hover:text-[var(--logo-teal)] transition-colors">Services</Link></li>
+              <li><Link href="#about" className="hover:text-[var(--logo-teal)] transition-colors">About</Link></li>
+              <li><Link href="#contact" className="hover:text-[var(--logo-teal)] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
