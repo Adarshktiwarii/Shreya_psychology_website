@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -27,8 +28,14 @@ export function Navbar() {
               <LotusLogo variant="vertical" className="h-10 w-10 text-[var(--logo-teal)] transition-transform group-hover:scale-105 group-hover:text-foreground duration-300" />
             </div>
             {/* Mobile Logo: Crescent (Full) */}
-            <div className="md:hidden">
-              <LotusLogo variant="crescent" className="h-12 w-12 text-[var(--logo-teal)] transition-transform group-hover:scale-105 group-hover:text-foreground duration-300" />
+            <div className="md:hidden relative h-12 w-12">
+              <Image 
+                src="/full-logo.png" 
+                alt="ManoArohan Logo" 
+                fill
+                className="object-contain transition-transform group-hover:scale-105 duration-300"
+                priority
+              />
             </div>
             <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-foreground transition-colors duration-300">
               ManoArohan
