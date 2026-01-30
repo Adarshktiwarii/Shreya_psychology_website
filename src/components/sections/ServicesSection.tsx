@@ -3,65 +3,21 @@
 import { motion } from "framer-motion";
 import { User, Users, HeartHandshake, FileText, Compass, GraduationCap } from "lucide-react";
 
+import { LotusLogo } from "@/components/layout/Logo";
+
 export function ServicesSection() {
   const services = [
-    {
-      title: "Individual Therapy",
-      subtitle: "(Adults & Adolescents)",
-      description: "One-to-one sessions focused on understanding your thoughts, emotions, and behaviours. Sessions are collaborative, confidential, and paced according to your comfort.",
-      icon: User,
-      color: "bg-blue-50 text-blue-600"
-    },
-    {
-      title: "Family Therapy",
-      description: "Support for families to improve communication, understanding, and emotional connection.",
-      icon: Users,
-      color: "bg-green-50 text-green-600"
-    },
-    {
-      title: "Couple Therapy",
-      description: "Helping couples navigate relationship concerns, strengthen communication, and build healthier dynamics.",
-      icon: HeartHandshake,
-      color: "bg-rose-50 text-rose-600"
-    },
-    {
-      title: "Psychological Assessment",
-      subtitle: "& Psychodiagnosis",
-      description: "Evidence-based assessments to aid clinical understanding, diagnosis, and treatment planning when required.",
-      icon: FileText,
-      color: "bg-purple-50 text-purple-600"
-    },
-    {
-      title: "Career Counselling",
-      description: "Structured guidance for academic and career decision-making using validated tools and personalised exploration.",
-      icon: Compass,
-      color: "bg-amber-50 text-amber-600"
-    },
-    {
-      title: "Workshops",
-      description: "Psychoeducational and skill-based workshops on mental health, emotional wellbeing, and coping strategies for groups and institutions.",
-      icon: GraduationCap,
-      color: "bg-teal-50 text-teal-600"
-    }
+    // ... services array
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0 }
-  };
+  // ... motion variants
 
   return (
-    <section id="services" className="container mx-auto px-4 py-16 max-w-7xl scroll-mt-20">
+    <section id="services" className="relative container mx-auto px-4 py-16 max-w-7xl scroll-mt-20 overflow-hidden">
+      {/* Watermark for this section */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none opacity-[0.05]">
+        <LotusLogo className="w-[1000px] h-[1000px] text-[var(--logo-teal)]" />
+      </div>
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -16,24 +16,24 @@ export function Hero() {
         <LotusLogo className="w-[120vw] h-[120vw] md:w-[900px] md:h-[900px] text-[var(--logo-teal)] opacity-[0.1]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-5xl">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-5xl overflow-visible">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="space-y-10 mb-20"
+          className="space-y-10 mb-20 px-4"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight whitespace-nowrap">
-            Inner Balance, <span className="text-[var(--logo-teal)]">Outer Growth</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight">
+            Inner Balance, <span className="text-[var(--logo-teal)] whitespace-nowrap">Outer Growth</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-foreground-muted font-light italic font-serif whitespace-nowrap overflow-hidden text-ellipsis">
+          <p className="text-xl md:text-3xl text-foreground-muted font-light italic font-serif max-w-full overflow-hidden text-ellipsis">
             "Because everyone needs a little help sometimes"
           </p>
           
           <div className="pt-8">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-[var(--logo-teal)] px-8 py-4 rounded-full text-white text-lg font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
+              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-[var(--logo-teal)] px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
             >
               Begin Your Journey <ArrowRight className="w-5 h-5" />
             </button>
