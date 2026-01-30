@@ -61,17 +61,17 @@ export function ServicesSection() {
   };
 
   return (
-    <section id="services" className="container mx-auto px-4 py-16 md:py-24 max-w-7xl scroll-mt-20">
+    <section id="services" className="container mx-auto px-4 py-12 md:py-24 max-w-7xl scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-20 max-w-3xl mx-auto"
+        className="text-center mb-12 md:mb-20 max-w-3xl mx-auto"
       >
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground font-serif">
+        <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 text-foreground font-serif">
           Services
         </h2>
-        <p className="text-xl text-foreground-muted">
+        <p className="text-lg md:text-xl text-foreground-muted">
           Comprehensive psychological care tailored to your unique journey.
         </p>
       </motion.div>
@@ -81,7 +81,7 @@ export function ServicesSection() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {services.map((service, index) => (
           <motion.div 

@@ -6,19 +6,19 @@ import Link from "next/link";
 
 export function ForYouSection() {
   return (
-    <section id="for-you" className="container mx-auto px-4 py-16 md:py-24 max-w-5xl scroll-mt-20">
+    <section id="for-you" className="container mx-auto px-4 py-12 md:py-24 max-w-5xl scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-20"
+        className="text-center mb-12 md:mb-20"
       >
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground font-serif">
+        <h2 className="text-3xl md:text-6xl font-bold mb-6 text-foreground font-serif">
           Who This Space Is For
         </h2>
       </motion.div>
 
-      <div className="space-y-24">
+      <div className="space-y-16 md:space-y-24">
         {/* Hero Section */}
         <motion.div 
           initial={{ opacity: 0 }}
@@ -30,7 +30,7 @@ export function ForYouSection() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-primary/10 via-transparent to-accent/10 blur-3xl rounded-full -z-10"></div>
           
           <div className="space-y-4 max-w-4xl mx-auto">
-            <p className="text-3xl md:text-5xl text-foreground font-serif leading-snug">
+            <p className="text-2xl md:text-5xl text-foreground font-serif leading-snug">
               If life has been feeling a little heavy —
               <br />
               <span className="italic">even if you can’t fully explain why</span> —
@@ -39,7 +39,7 @@ export function ForYouSection() {
             </p>
           </div>
 
-          <p className="text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto leading-relaxed pt-8">
+          <p className="text-base md:text-xl text-foreground-muted max-w-2xl mx-auto leading-relaxed pt-4 md:pt-8">
             You don’t need to be in crisis to seek support, and you don’t need to arrive with everything clearly defined. Sometimes emotions feel overwhelming, confusing, or simply difficult to carry alone. That, in itself, is reason enough to reach out.
           </p>
         </motion.div>

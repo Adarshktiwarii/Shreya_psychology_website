@@ -10,8 +10,8 @@ export function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background">
       {/* Background Watermark - Optimized for aesthetic appeal */}
-      <div className="absolute inset-0 flex items-start justify-center pointer-events-none overflow-hidden z-0 pt-20 md:pt-28">
-        <LotusLogo className="w-[100vw] h-[100vw] md:w-[700px] md:h-[700px] text-[var(--logo-teal)] opacity-[0.1] rotate-12" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden z-0">
+        <LotusLogo className="w-[120vw] h-[120vw] md:w-[900px] md:h-[900px] text-[var(--logo-teal)] opacity-[0.1]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-5xl">

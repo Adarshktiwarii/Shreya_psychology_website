@@ -5,36 +5,36 @@ import { motion } from "framer-motion";
 
 export function AboutSection() {
   return (
-    <section id="about" className="container mx-auto px-4 py-16 md:py-24 max-w-5xl scroll-mt-20">
+    <section id="about" className="container mx-auto px-4 py-12 md:py-24 max-w-5xl scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-12 md:mb-16"
       >
-        <span className="text-[var(--logo-teal)] font-medium text-lg uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
-        <h2 className="text-4xl md:text-6xl font-bold text-foreground font-serif">
+        <span className="text-[var(--logo-teal)] font-medium text-base md:text-lg uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
+        <h2 className="text-3xl md:text-6xl font-bold text-foreground font-serif">
           About Me
         </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-12 gap-12 items-start">
+      <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
         {/* Intro Column */}
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="md:col-span-7 space-y-8"
+          className="md:col-span-7 space-y-6 md:space-y-8"
         >
           <div className="relative">
              <div className="absolute -left-6 -top-6 w-20 h-20 bg-primary/20 rounded-full blur-2xl -z-10"></div>
-             <p className="text-3xl font-serif text-secondary-foreground leading-tight">
+             <p className="text-2xl md:text-3xl font-serif text-secondary-foreground leading-tight">
               Hi, I'm <span className="text-[var(--logo-teal)]">Shreya Raghuwanshi</span>.
              </p>
           </div>
           
-          <div className="prose prose-lg text-foreground/90 leading-relaxed space-y-6">
+          <div className="prose prose-lg text-foreground/90 leading-relaxed space-y-4 md:space-y-6">
             <p>
               With training in evidence-based psychological interventions, I work with diverse populations using a client-centered, non-judgemental, and collaborative approach.
             </p>
