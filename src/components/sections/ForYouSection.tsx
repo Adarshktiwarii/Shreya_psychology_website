@@ -67,11 +67,7 @@ export function ForYouSection() {
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground font-serif">
               You don’t have to have it all figured out
             </h3>
-            <div className="space-y-4 text-lg text-foreground-dark leading-relaxed">
-              <p>
-                It’s also okay if you feel that something more specific might be going on. Wanting clarity, understanding, or even a diagnosis does not mean you are weak or “labelling” yourself. Often, it can be an important step toward making sense of your experience and receiving the right kind of support.
-              </p>
-            </div>
+            {/* Content removed as per user request */}
           </div>
         </motion.div>
 
@@ -124,10 +120,10 @@ export function ForYouSection() {
             </h3>
             <div className="space-y-6 text-lg text-foreground-dark leading-relaxed">
               <p>
-                Therapy here is not about rushing to conclusions or fitting you into a box. It is a collaborative process of understanding your experiences — gently and thoughtfully.
+                Therapy here is not about rushing to conclusions or fitting you into a box. It is a collaborative process of understanding your experiences - gently and thoughtfully.
               </p>
               <p>
-                You are not defined by a diagnosis. However, having language for what you’re experiencing can sometimes bring relief, direction, and validation. Whether you are seeking reflection, emotional support, or clinical understanding, this space is here to meet you where you are.
+                If a clincial concern is present, it can be explored ethically and carefully, with the aim of clarity, self-awareness and appropriate care.
               </p>
             </div>
           </div>

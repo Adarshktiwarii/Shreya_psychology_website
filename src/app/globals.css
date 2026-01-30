@@ -33,6 +33,8 @@
   --logo-teal: #7FA9B4; 
   /* Actual background pastel blue */
   --logo-bg-blue: #DDEFF4; 
+  /* Soft Blush for secondary brand elements */
+  --logo-blush: #EAC0B8; 
 }
 
 @theme inline {
@@ -47,6 +49,7 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-logo-teal: var(--logo-teal);
+  --color-logo-blush: var(--logo-blush);
   
   --font-serif: var(--font-libre-baskerville), serif;
 }
