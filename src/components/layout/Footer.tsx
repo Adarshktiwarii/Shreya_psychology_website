@@ -56,8 +56,13 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-gray-100 text-center text-sm text-foreground-muted">
-          © {new Date().getFullYear()} ManoArohan. All rights reserved.
+        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-foreground-muted gap-4">
+          <span>© {new Date().getFullYear()} ManoArohan. All rights reserved.</span>
+          <div className="flex gap-6">
+            <Link href="/terms" className="hover:text-[var(--logo-teal)] transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-[var(--logo-teal)] transition-colors">Privacy Policy</Link>
+            <Link href="/refund" className="hover:text-[var(--logo-teal)] transition-colors">Refund Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
