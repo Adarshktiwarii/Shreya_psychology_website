@@ -26,15 +26,15 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-[2rem] p-0 max-w-lg w-full shadow-2xl relative overflow-hidden"
+              className="bg-transparent max-w-lg w-full relative"
             >
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
+                className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white rounded-full transition-colors z-20 shadow-sm"
               >
                 <X className="w-6 h-6 text-foreground-muted" />
               </button>
-              <div className="p-8">
+              <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden">
                 <BookingForm />
               </div>
             </motion.div>
