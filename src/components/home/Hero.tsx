@@ -2,11 +2,13 @@
 
 import { LotusLogo } from "@/components/layout/Logo";
 import { motion } from "framer-motion";
-
-import Link from "next/link";
+import { useState } from "react";
+import { BookingModal } from "@/components/booking/BookingModal";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background">
       {/* Background Watermark - Optimized for aesthetic appeal */}
@@ -35,9 +37,12 @@ export function Hero() {
           </p>
           
           <div className="pt-8">
-            <Link href="#contact" className="inline-flex items-center gap-2 bg-[var(--logo-teal)] px-8 py-4 rounded-full text-white text-lg font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex items-center gap-2 bg-[var(--logo-teal)] px-8 py-4 rounded-full text-white text-lg font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1"
+            >
               Begin Your Journey <ArrowRight className="w-5 h-5" />
-            </Link>
+            </button>
           </div>
         </motion.div>
 
@@ -62,6 +67,8 @@ export function Hero() {
           </p>
         </motion.div>
       </div>
+
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
