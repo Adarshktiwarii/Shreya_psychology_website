@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, Heart, CloudLightning, BrainCircuit, HeartHandshake, BatteryWarning, Users, Sparkles } from "lucide-react";
+import { Award, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { LotusLogo } from "@/components/layout/Logo";
 
@@ -113,54 +113,41 @@ export function AboutSection() {
           <h3 className="text-2xl md:text-4xl font-bold font-serif text-[var(--logo-blush)]">Areas of Expertise</h3>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
-              title: "Anxiety",
-              icon: CloudLightning,
-              shape: "rounded-[3rem] rounded-tr-[1rem] rounded-bl-[1rem]" 
-            },
-            {
-              title: "Stress",
-              icon: BatteryWarning,
-              shape: "rounded-[3rem] rounded-tl-[1rem] rounded-br-[1rem]"
-            },
-            {
-              title: "Trauma",
-              icon: BrainCircuit,
-              shape: "rounded-full"
+              title: "Emotional Well-being",
+              icon: "🌱",
+              items: ["Stress & Anxiety", "Emotional Regulation", "Resilience Building"]
             },
             {
               title: "Relationships",
-              icon: Users,
-              shape: "rounded-[2rem] rounded-tr-[4rem] rounded-bl-[4rem]"
+              icon: "🤝",
+              items: ["Relationship Dynamics", "Communication Skills", "Interpersonal Growth"]
             },
             {
-              title: "Depression",
-              icon: HeartHandshake, // Representing support/connection
-              shape: "rounded-[4rem] rounded-tl-[2rem] rounded-br-[2rem]"
+              title: "Therapeutic Approaches",
+              icon: "🧠",
+              items: ["CBT", "Mindfulness", "DBT-informed skills"]
             },
             {
-              title: "ADHD",
-              icon: Sparkles,
-              shape: "rounded-[3rem] rounded-tl-[5rem]"
+              title: "Assessment",
+              icon: "📊",
+              items: ["Psychometric Tools", "Clinical Evaluation", "Psychodiagnosis"]
             }
           ].map((area, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center gap-4 group cursor-default"
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-center text-center h-full"
             >
-              <div 
-                className={`
-                  w-32 h-32 md:w-40 md:h-40 ${area.shape} 
-                  bg-[var(--logo-teal)]/20 flex items-center justify-center 
-                  transition-all duration-300 group-hover:shadow-lg group-hover:bg-[var(--logo-blush)]/20
-                `}
-              >
-                <area.icon className="w-12 h-12 text-[var(--logo-teal)] group-hover:text-[var(--logo-blush)] transition-colors duration-300" strokeWidth={1.5} />
-              </div>
-              <h4 className="font-bold text-lg text-foreground uppercase tracking-wider text-center">{area.title}</h4>
+              <span className="text-4xl mb-6 bg-background p-4 rounded-2xl">{area.icon}</span>
+              <h4 className="font-bold text-lg mb-4 text-foreground">{area.title}</h4>
+              <ul className="space-y-2 text-sm text-foreground-muted">
+                {area.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
