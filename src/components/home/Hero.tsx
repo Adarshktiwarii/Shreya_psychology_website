@@ -16,24 +16,24 @@ export function Hero() {
         <LotusLogo className="w-[120vw] h-[120vw] md:w-[900px] md:h-[900px] text-[var(--logo-teal)] opacity-[0.1]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-5xl overflow-visible">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-full overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="space-y-10 mb-20 px-4"
+          className="space-y-10 mb-20 px-4 w-full"
         >
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight whitespace-normal md:whitespace-nowrap break-words">
             Inner Balance, <span className="text-[var(--logo-teal)] whitespace-nowrap">Outer Growth</span>
           </h1>
-          <p className="text-xl md:text-3xl text-foreground-muted font-light italic font-serif max-w-full overflow-hidden text-ellipsis">
+          <p className="text-xl md:text-3xl text-foreground-muted font-light italic font-serif max-w-full overflow-hidden text-ellipsis px-2">
             "Because everyone needs a little help sometimes"
           </p>
           
           <div className="pt-8">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-[var(--logo-teal)] px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-sm hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-[var(--logo-teal)] px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-none hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
             >
               Begin Your Journey <ArrowRight className="w-5 h-5" />
             </button>
