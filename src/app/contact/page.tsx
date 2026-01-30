@@ -33,7 +33,7 @@ export default function ContactPage() {
                 <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
                   <Mail className="w-5 h-5 text-secondary-foreground" />
                 </div>
-                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[var(--logo-teal)] transition-colors mt-1 font-medium">
+                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[var(--logo-blush)] transition-colors mt-1 font-medium">
                   shreya.mhealth@gmail.com
                 </a>
               </div>
@@ -43,7 +43,7 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 text-secondary-foreground" />
                 </div>
                 <div className="flex flex-col mt-1">
-                  <a href="tel:+918982108778" className="hover:text-[var(--logo-teal)] transition-colors font-medium">
+                  <a href="tel:+918982108778" className="hover:text-[var(--logo-blush)] transition-colors font-medium">
                     +91 8982108778
                   </a>
                   <span className="text-sm text-foreground-muted">(Available on WhatsApp)</span>

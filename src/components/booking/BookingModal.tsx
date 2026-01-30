@@ -30,7 +30,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
             >
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white rounded-full transition-colors z-20 shadow-sm"
+                className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white hover:text-[var(--logo-blush)] rounded-full transition-colors z-20 shadow-sm"
               >
                 <X className="w-6 h-6 text-foreground-muted" />
               </button>
@@ -130,7 +130,7 @@ export function BookingForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-[var(--logo-teal)] text-white font-medium py-4 rounded-xl hover:bg-opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
+          className="w-full bg-[var(--logo-teal)] text-white font-medium py-4 rounded-xl hover:bg-[var(--logo-blush)] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
         >
           {isSubmitting ? (
             <>

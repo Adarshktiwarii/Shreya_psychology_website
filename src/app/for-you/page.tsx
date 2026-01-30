@@ -90,7 +90,7 @@ export default function ForYouPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 key={i} 
-                className="flex flex-col p-6 bg-white rounded-2xl border border-gray-100 hover:border-[var(--logo-teal)]/30 hover:shadow-lg transition-all duration-300 group h-full"
+                className="flex flex-col p-6 bg-white rounded-2xl border border-gray-100 hover:border-[var(--logo-blush)]/30 hover:shadow-lg transition-all duration-300 group h-full"
               >
                 <div className="mb-4 p-3 bg-background rounded-full w-fit group-hover:bg-[var(--logo-teal)]/10 transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-[var(--logo-teal)]" />
@@ -129,7 +129,7 @@ export default function ForYouPage() {
              <p className="text-lg text-foreground-muted mb-8 relative z-10">
                You don’t need to have all the answers before you begin. We’ll take it one step at a time — together.
              </p>
-             <Link href="/contact" className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full text-[var(--logo-teal)] font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-sm hover:shadow-md">
+             <Link href="/contact" className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full text-[var(--logo-teal)] font-medium hover:bg-[var(--logo-blush)] hover:text-white transition-all shadow-sm hover:shadow-md">
                Start Your Journey <ArrowRight className="w-4 h-4" />
              </Link>
           </div>
