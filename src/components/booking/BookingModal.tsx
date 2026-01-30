@@ -30,7 +30,7 @@ export function BookingModal({ isOpen, onClose }: BookingModalProps) {
             >
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white hover:text-[var(--logo-blush)] rounded-full transition-colors z-20 shadow-sm"
+                className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white hover:text-foreground rounded-full transition-colors z-20 shadow-sm"
               >
                 <X className="w-6 h-6 text-foreground-muted" />
               </button>

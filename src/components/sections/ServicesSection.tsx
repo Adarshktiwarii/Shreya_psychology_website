@@ -74,7 +74,7 @@ export function ServicesSection() {
         viewport={{ once: true }}
         className="text-center mb-16 max-w-3xl mx-auto"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--logo-blush)] font-serif">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground font-serif">
           Services
         </h2>
         <p className="text-lg text-foreground-muted">
@@ -106,7 +106,7 @@ export function ServicesSection() {
                 {service.title}
               </h3>
               {service.subtitle && (
-                <span className="text-sm font-medium text-[var(--logo-blush)] uppercase tracking-wider block mb-3">
+                <span className="text-sm font-medium text-foreground uppercase tracking-wider block mb-3">
                   {service.subtitle}
                 </span>
               )}
@@ -128,7 +128,7 @@ export function ServicesSection() {
         <div className="inline-block p-1 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full">
           <div className="bg-white px-8 py-4 rounded-full border border-white/50 shadow-sm">
             <p className="text-xl font-medium text-foreground">
-              Sessions available <span className="text-[var(--logo-blush)] font-bold">In-Person</span> & <span className="text-[var(--logo-blush)] font-bold">Online</span>
+              Sessions available <span className="text-foreground font-bold">In-Person</span> & <span className="text-foreground font-bold">Online</span>
             </p>
           </div>
         </div>

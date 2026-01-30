@@ -22,8 +22,8 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <LotusLogo className="h-10 w-10 text-[var(--logo-teal)] transition-transform group-hover:scale-105 group-hover:text-[var(--logo-blush)] duration-300" />
-            <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-[var(--logo-blush)] transition-colors duration-300">
+            <LotusLogo className="h-10 w-10 text-[var(--logo-teal)] transition-transform group-hover:scale-105 group-hover:text-foreground duration-300" />
+            <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-foreground transition-colors duration-300">
               ManoArohan
             </span>
           </Link>
@@ -34,7 +34,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-[var(--logo-blush)] transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-blush)] after:transition-all hover:after:w-full"
+                className="text-lg font-medium text-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-blush)] after:transition-all hover:after:w-full"
               >
                 {link.name}
               </Link>
@@ -43,7 +43,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:bg-secondary/20 hover:text-[var(--logo-blush)] rounded-full transition-colors"
+            className="md:hidden p-2 text-foreground hover:bg-secondary/20 hover:text-foreground rounded-full transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -60,7 +60,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-[var(--logo-blush)] transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
+                className="text-lg font-medium text-foreground hover:text-foreground transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

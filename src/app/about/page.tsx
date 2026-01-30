@@ -11,7 +11,7 @@ export default function AboutPage() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-16"
       >
-        <span className="text-[var(--logo-teal)] font-medium text-lg uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
+        <span className="text-foreground font-medium text-lg uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
         <h1 className="text-4xl md:text-6xl font-bold text-foreground font-serif">
           About Me
         </h1>
@@ -37,7 +37,7 @@ export default function AboutPage() {
               With training in evidence-based psychological interventions, I work with diverse populations using a client-centered, non-judgemental, and collaborative approach.
             </p>
             <p>
-              My work integrates clinical expertise with a deep respect for each person’s lived experience. Therapy at <span className="font-semibold text-[var(--logo-teal)]">ManoArohan</span> is approached with confidentiality, autonomy, and clinical responsibility.
+              My work integrates clinical expertise with a deep respect for each person’s lived experience. Therapy at <span className="font-semibold text-foreground">ManoArohan</span> is approached with confidentiality, autonomy, and clinical responsibility.
             </p>
             <div className="bg-gradient-to-br from-white to-background p-6 rounded-2xl border-l-4 border-[var(--logo-teal)] shadow-sm my-8">
               <p className="italic text-foreground-muted m-0">
@@ -99,7 +99,7 @@ export default function AboutPage() {
         className="mt-24 md:mt-32"
       >
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-[var(--logo-teal)] mb-4">
+          <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-foreground mb-4">
             <Heart className="w-6 h-6" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground">Areas of Expertise</h2>

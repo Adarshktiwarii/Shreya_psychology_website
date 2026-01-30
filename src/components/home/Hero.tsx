@@ -34,7 +34,7 @@ export function Hero() {
           className="space-y-10 mb-20 px-4 w-full"
         >
           <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-foreground drop-shadow-sm leading-tight whitespace-normal md:whitespace-nowrap break-words">
-            Inner Balance, <span className="text-[var(--logo-blush)] whitespace-nowrap">Outer Growth</span>
+            Inner Balance, <span className="text-foreground whitespace-nowrap">Outer Growth</span>
           </h1>
           <p className="text-xl md:text-3xl text-foreground-muted font-light italic font-serif max-w-full overflow-hidden text-ellipsis px-2">
             "Because everyone needs a little help sometimes"
@@ -43,7 +43,7 @@ export function Hero() {
           <div className="pt-8">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-[var(--logo-teal)] px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-blush)] hover:border-[var(--logo-blush)] hover:text-white transition-all shadow-none hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-teal)] hover:border-[var(--logo-teal)] hover:text-white transition-all shadow-none hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
             >
               Begin Your Journey <ArrowRight className="w-5 h-5" />
             </button>
@@ -56,7 +56,7 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="relative space-y-6 text-lg leading-relaxed text-foreground max-w-4xl mx-auto text-left bg-white/60 backdrop-blur-md p-8 md:p-12 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/80"
         >
-          <p className="font-bold text-[var(--logo-teal)] text-2xl mb-4">
+          <p className="font-bold text-foreground text-2xl mb-4">
             Hi, I’m Shreya Raghuwanshi, a Licensed Clinical Psychologist.
           </p>
           <div className="space-y-6 text-foreground/90">
@@ -67,7 +67,7 @@ export function Hero() {
               Sometimes life simply feels heavy or hard to carry alone — and that is reason enough to reach out.
             </p>
             <p>
-              <span className="font-bold text-[var(--logo-teal)]">ManoArohan</span> is a space to help you make sense of your emotions and find steadiness again, at your own pace.
+              <span className="font-bold text-foreground">ManoArohan</span> is a space to help you make sense of your emotions and find steadiness again, at your own pace.
             </p>
           </div>
         </motion.div>

@@ -17,8 +17,8 @@ export function AboutSection() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="text-[var(--logo-blush)] font-medium text-base uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
-        <h2 className="text-3xl md:text-5xl font-bold text-[var(--logo-blush)] font-serif">
+        <span className="text-foreground font-medium text-base uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground font-serif">
           About Me
         </h2>
       </motion.div>
@@ -35,7 +35,7 @@ export function AboutSection() {
           <div className="relative">
              <div className="absolute -left-6 -top-6 w-20 h-20 bg-primary/20 rounded-full blur-2xl -z-10"></div>
              <p className="text-2xl md:text-3xl font-serif text-secondary-foreground leading-tight">
-              Hi, I'm <span className="text-[var(--logo-blush)]">Shreya Raghuwanshi</span>.
+              Hi, I'm <span className="text-foreground">Shreya Raghuwanshi</span>.
              </p>
           </div>
           
@@ -44,7 +44,7 @@ export function AboutSection() {
               With training in evidence-based psychological interventions, I work with diverse populations using a client-centered, non-judgemental, and collaborative approach.
             </p>
             <p>
-              My work integrates clinical expertise with a deep respect for each person’s lived experience. Therapy at <span className="font-semibold text-[var(--logo-blush)]">ManoArohan</span> is approached with confidentiality, autonomy, and clinical responsibility.
+              My work integrates clinical expertise with a deep respect for each person’s lived experience. Therapy at <span className="font-semibold text-foreground">ManoArohan</span> is approached with confidentiality, autonomy, and clinical responsibility.
             </p>
             <div className="bg-gradient-to-br from-white to-background p-6 rounded-2xl border-l-4 border-[var(--logo-teal)] shadow-sm my-8">
               <p className="italic text-foreground-muted m-0">
@@ -107,10 +107,10 @@ export function AboutSection() {
         className="mt-20"
       >
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-[var(--logo-teal)] mb-4">
+          <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-foreground mb-4">
             <Heart className="w-6 h-6" />
           </div>
-          <h3 className="text-2xl md:text-4xl font-bold font-serif text-[var(--logo-blush)]">Areas of Expertise</h3>
+          <h3 className="text-2xl md:text-4xl font-bold font-serif text-foreground">Areas of Expertise</h3>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

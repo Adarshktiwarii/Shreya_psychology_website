@@ -98,7 +98,7 @@ export default function ServicesPage() {
                 {service.title}
               </h3>
               {service.subtitle && (
-                <span className="text-sm font-medium text-[var(--logo-teal)] uppercase tracking-wider block mb-3">
+                <span className="text-sm font-medium text-foreground uppercase tracking-wider block mb-3">
                   {service.subtitle}
                 </span>
               )}
@@ -120,7 +120,7 @@ export default function ServicesPage() {
         <div className="inline-block p-1 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full">
           <div className="bg-white px-8 py-4 rounded-full border border-white/50 shadow-sm">
             <p className="text-xl font-medium text-foreground">
-              Sessions available <span className="text-[var(--logo-teal)] font-bold">In-Person</span> & <span className="text-[var(--logo-teal)] font-bold">Online</span>
+              Sessions available <span className="text-foreground font-bold">In-Person</span> & <span className="text-foreground font-bold">Online</span>
             </p>
           </div>
         </div>
