@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm Off-White */
-  --background: #FAFAF7;
+  /* Soft Blush Pink Background - As requested */
+  --background: #FFF0F5; 
   
   /* Text: Charcoal - As requested for main text color */
   --foreground: #36454F;
   
   /* Muted variant for less important text */
-  --foreground-muted: #708090;
+  --foreground-muted: #55606A;
   
   /* Darker charcoal/black for essential readability */
   --foreground-dark: #1C2833; 
@@ -17,8 +17,8 @@
   --primary: #D4E6F1;
   --primary-foreground: #2C3E50;
   
-  /* Soft Blush Pink */
-  --secondary: #F4C2C2; 
+  /* Soft Blush Pink - Slightly darker for accents on blush background */
+  --secondary: #F8C8DC; 
   --secondary-foreground: #5D4037;
   
   /* Sage Green - Kept as accent */
