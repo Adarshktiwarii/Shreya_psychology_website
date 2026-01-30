@@ -57,7 +57,11 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-foreground-muted gap-4">
-          <span>© {new Date().getFullYear()} ManoArohan. All rights reserved.</span>
+          <div className="flex flex-col gap-1 md:text-left text-center">
+            <span>© {new Date().getFullYear()} ManoArohan. All rights reserved.</span>
+            <span className="text-xs opacity-70">Designed and developed by Adarsh & Consultants</span>
+            <span className="text-xs opacity-70">Made in Bangalore, India</span>
+          </div>
           <div className="flex gap-6">
             <Link href="/terms" className="hover:text-[var(--logo-blush)] transition-colors">Terms of Service</Link>
             <Link href="/privacy" className="hover:text-[var(--logo-blush)] transition-colors">Privacy Policy</Link>
