@@ -66,7 +66,7 @@ export function ServicesSection() {
     <section id="services" className="relative container mx-auto px-4 py-16 max-w-7xl scroll-mt-20 overflow-hidden">
       {/* Watermark for this section */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none opacity-[0.05]">
-        <LotusLogo className="w-[1000px] h-[1000px] text-[var(--logo-teal)]" />
+        <LotusLogo variant="crescent" className="w-[1000px] h-[1000px] text-[var(--logo-teal)]" />
       </div>
       <motion.div 
         initial={{ opacity: 0, y: -20 }}

@@ -14,7 +14,7 @@ export function Hero() {
       {/* Background Watermark - Optimized for aesthetic appeal (Desktop Only) */}
       <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none overflow-hidden z-0">
          {/* Main Logo as central graphic element instead of just a watermark */}
-         <LotusLogo className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] text-[var(--logo-teal)] opacity-[0.15]" />
+         <LotusLogo variant="crescent" className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] text-[var(--logo-teal)] opacity-[0.15]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-full overflow-hidden">
@@ -25,7 +25,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="md:hidden flex justify-center mb-8"
         >
-          <LotusLogo className="w-48 h-48 text-[var(--logo-teal)] opacity-90" />
+          <LotusLogo variant="crescent" className="w-48 h-48 text-[var(--logo-teal)] opacity-90" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
