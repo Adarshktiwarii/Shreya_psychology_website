@@ -45,12 +45,19 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-logo-teal: var(--logo-teal);
   
-  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-serif: var(--font-libre-baskerville), serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p, span, li, a {
+  font-weight: 400;
 }
