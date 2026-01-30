@@ -56,18 +56,19 @@ export function LotusLogo({ className, variant = "crescent" }: { className?: str
       xmlns="http://www.w3.org/2000/svg"
       className={cn("w-10 h-10", className)}
     >
-      {/* Outer Crescent Moon Circle - Left side opening */}
+      {/* Crescent Moon Circle - Right side */}
       <path
-        d="M 160 100 A 75 75 0 1 1 50 65" 
+        d="M 80 160 A 70 70 0 1 0 80 20" 
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         fill="none"
+        transform="rotate(-15 100 90)"
       />
 
-      {/* Sun/Rays at top */}
-      <g transform="translate(100, 55) scale(0.6)">
-        <path d="M-20 0 A 20 20 0 0 1 20 0" stroke="currentColor" strokeWidth="2" fill="none" />
+      {/* Sun - Half sun rising above lotus */}
+      <g transform="translate(100, 75) scale(0.6)">
+        <path d="M-15 0 A 15 15 0 0 1 15 0" stroke="currentColor" strokeWidth="2" fill="none" />
         <g stroke="currentColor" strokeWidth="2" strokeLinecap="round">
            <line x1="0" y1="-5" x2="0" y2="-15" />
            <line x1="10" y1="-2" x2="18" y2="-10" />
@@ -77,10 +78,10 @@ export function LotusLogo({ className, variant = "crescent" }: { className?: str
         </g>
       </g>
 
-      {/* Lotus Flower - Centered in the crescent opening */}
-      <g transform="translate(100, 115) scale(0.8)" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
+      {/* Lotus Flower - Centered */}
+      <g transform="translate(100, 115) scale(0.85)" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
          {/* Center Petal */}
-         <path d="M0 15 C0 15 -10 -20 0 -45 C10 -20 0 15 0 15" />
+         <path d="M0 15 C0 15 -10 -25 0 -50 C10 -25 0 15 0 15" />
          
          {/* Inner Side Petals */}
          <path d="M0 15 C0 15 -20 0 -25 -25 C-15 -15 0 0 0 15" />
@@ -90,16 +91,16 @@ export function LotusLogo({ className, variant = "crescent" }: { className?: str
          <path d="M0 15 C0 15 -35 5 -40 -15 C-25 -5 0 5 0 15" />
          <path d="M0 15 C0 15 35 5 40 -15 C25 -5 0 5 0 15" />
          
-         {/* Bottom/Outer Leaves */}
-         <path d="M0 15 C0 15 -45 20 -50 5 C-30 10 0 15 0 15" />
-         <path d="M0 15 C0 15 45 20 50 5 C30 10 0 15 0 15" />
+         {/* Outer Leaves - Adjusted for fullness */}
+         <path d="M0 15 C0 15 -55 10 -60 -5 C-40 0 0 15 0 15" />
+         <path d="M0 15 C0 15 55 10 60 -5 C40 0 0 15 0 15" />
       </g>
 
-      {/* Three Dots below */}
+      {/* Vertical Dots */}
       <g fill="currentColor">
-        <circle cx="100" cy="140" r="2" />
-        <circle cx="100" cy="150" r="2" />
-        <circle cx="100" cy="160" r="2" />
+        <circle cx="100" cy="155" r="2.5" />
+        <circle cx="100" cy="165" r="2" />
+        <circle cx="100" cy="173" r="1.5" />
       </g>
     </svg>
   );
