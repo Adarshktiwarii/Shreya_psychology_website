@@ -10,10 +10,39 @@ interface BookingModalProps {
 }
 
 export function BookingModal({ isOpen, onClose }: BookingModalProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  // ... rest of the component
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-[2rem] p-0 max-w-lg w-full shadow-2xl relative overflow-hidden"
+            >
+              <button
+                onClick={onClose}
+                className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
+              >
+                <X className="w-6 h-6 text-foreground-muted" />
+              </button>
+              <div className="p-8">
+                <BookingForm />
+              </div>
+            </motion.div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
 }
 
 export function BookingForm() {
@@ -45,7 +74,7 @@ export function BookingForm() {
   }
 
   return (
-    <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-secondary/20">
+    <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-secondary/20 h-full">
       <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
         Begin Your Journey
       </h3>
