@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="container mx-auto px-4 py-12 md:py-24 max-w-4xl scroll-mt-20">
+    <section id="contact" className="container mx-auto px-4 py-16 max-w-4xl scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-8 md:mb-12"
+        className="text-center mb-12"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground font-serif">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground font-serif">
           Contact
         </h2>
       </motion.div>

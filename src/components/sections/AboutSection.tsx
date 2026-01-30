@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 
 export function AboutSection() {
   return (
-    <section id="about" className="container mx-auto px-4 py-12 md:py-24 max-w-5xl scroll-mt-20">
+    <section id="about" className="container mx-auto px-4 py-16 max-w-5xl scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12 md:mb-16"
+        className="text-center mb-16"
       >
-        <span className="text-[var(--logo-teal)] font-medium text-base md:text-lg uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
-        <h2 className="text-3xl md:text-6xl font-bold text-foreground font-serif">
+        <span className="text-[var(--logo-teal)] font-medium text-base uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground font-serif">
           About Me
         </h2>
       </motion.div>
@@ -99,13 +99,13 @@ export function AboutSection() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="mt-24 md:mt-32"
+        className="mt-20"
       >
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-[var(--logo-teal)] mb-4">
             <Heart className="w-6 h-6" />
           </div>
-          <h3 className="text-3xl md:text-4xl font-bold font-serif text-foreground">Areas of Expertise</h3>
+          <h3 className="text-2xl md:text-4xl font-bold font-serif text-foreground">Areas of Expertise</h3>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

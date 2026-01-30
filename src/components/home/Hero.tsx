@@ -10,7 +10,7 @@ export function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background">
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-28 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background">
       {/* Background Watermark - Optimized for aesthetic appeal */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden z-0">
         <LotusLogo className="w-[120vw] h-[120vw] md:w-[900px] md:h-[900px] text-[var(--logo-teal)] opacity-[0.1]" />
@@ -44,7 +44,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="relative space-y-8 text-lg md:text-xl leading-relaxed text-foreground max-w-4xl mx-auto text-left bg-white/60 backdrop-blur-md p-10 md:p-14 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/80"
+          className="relative space-y-6 text-lg leading-relaxed text-foreground max-w-4xl mx-auto text-left bg-white/60 backdrop-blur-md p-8 md:p-12 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/80"
         >
           <p className="font-bold text-[var(--logo-teal)] text-2xl mb-4">
             Hi, I’m Shreya Raghuwanshi, a Licensed Clinical Psychologist.
