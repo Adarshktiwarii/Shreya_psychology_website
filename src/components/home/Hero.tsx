@@ -25,7 +25,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="md:hidden flex justify-center mb-8"
         >
-          <LotusLogo variant="crescent" className="w-48 h-48 text-[var(--logo-teal)] opacity-90" />
+          <LotusLogo variant="crescent" className="w-64 h-64 text-[var(--logo-teal)] opacity-90" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
