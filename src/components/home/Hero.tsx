@@ -3,6 +3,9 @@
 import { LotusLogo } from "@/components/layout/Logo";
 import { motion } from "framer-motion";
 
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 export function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-32 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background">
@@ -30,6 +33,12 @@ export function Hero() {
           <p className="text-2xl md:text-3xl text-foreground-muted font-light italic font-serif">
             "Because everyone needs a little help sometimes"
           </p>
+          
+          <div className="pt-8">
+            <Link href="#contact" className="inline-flex items-center gap-2 bg-[var(--logo-teal)] px-8 py-4 rounded-full text-white text-lg font-medium hover:bg-opacity-90 transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+              Begin Your Journey <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div

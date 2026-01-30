@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendlyEmbed } from "@/components/booking/CalendlyEmbed";
+import { BookingForm } from "@/components/booking/BookingModal";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -26,6 +26,7 @@ export function ContactSection() {
           transition={{ delay: 0.2 }}
           className="space-y-8"
         >
+          {/* ... existing contact details ... */}
           <section>
             <h3 className="text-2xl font-semibold mb-4 text-secondary-foreground font-serif">Get in Touch</h3>
             <p className="text-foreground-muted mb-6">
@@ -88,15 +89,8 @@ export function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="bg-white p-8 rounded-3xl shadow-sm border border-secondary/20"
         >
-          <h3 className="text-2xl font-semibold mb-6 text-secondary-foreground font-serif">Schedule a Session</h3>
-          <p className="text-foreground-muted mb-6">
-            Ready to start your journey? You can book a session directly through the calendar below.
-          </p>
-          <div className="bg-background rounded-xl overflow-hidden h-[600px] border border-gray-100">
-             <CalendlyEmbed />
-          </div>
+          <BookingForm />
         </motion.div>
       </div>
     </section>
