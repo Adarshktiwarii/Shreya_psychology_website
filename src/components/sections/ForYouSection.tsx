@@ -2,9 +2,12 @@
 
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { useState } from "react";
+import { BookingModal } from "@/components/booking/BookingModal";
 
 export function ForYouSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="for-you" className="container mx-auto px-4 py-12 md:py-24 max-w-5xl scroll-mt-20">
       <motion.div 
@@ -130,12 +133,17 @@ export function ForYouSection() {
              <p className="text-lg text-foreground-muted mb-8 relative z-10">
                You don’t need to have all the answers before you begin. We’ll take it one step at a time — together.
              </p>
-             <Link href="#contact" className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full text-[var(--logo-teal)] font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-sm hover:shadow-md">
+             <button 
+               onClick={() => setIsModalOpen(true)}
+               className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full text-[var(--logo-teal)] font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-sm hover:shadow-md"
+             >
                Start Your Journey <ArrowRight className="w-4 h-4" />
-             </Link>
+             </button>
           </div>
         </motion.div>
       </div>
+
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
