@@ -57,10 +57,15 @@ body {
   font-family: var(--font-serif);
 }
 
+/* Strictly enforce font family everywhere */
+* {
+  font-family: var(--font-serif);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-p, span, li, a {
+p, span, li, a, button, input, textarea, div {
   font-weight: 400;
 }
