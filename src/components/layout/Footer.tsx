@@ -20,11 +20,11 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2 text-sm text-foreground-muted">
-              <li><Link href="/" className="hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link href="#for-you" className="hover:text-foreground transition-colors">For You</Link></li>
-              <li><Link href="#services" className="hover:text-foreground transition-colors">Services</Link></li>
-              <li><Link href="#about" className="hover:text-foreground transition-colors">About</Link></li>
-              <li><Link href="#contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link href="/" className="hover:text-[var(--logo-teal)] transition-colors">Home</Link></li>
+              <li><Link href="#for-you" className="hover:text-[var(--logo-teal)] transition-colors">For You</Link></li>
+              <li><Link href="#services" className="hover:text-[var(--logo-teal)] transition-colors">Services</Link></li>
+              <li><Link href="#about" className="hover:text-[var(--logo-teal)] transition-colors">About</Link></li>
+              <li><Link href="#contact" className="hover:text-[var(--logo-teal)] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -42,16 +42,16 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-foreground">Contact</h3>
             <ul className="space-y-2 text-sm text-foreground-muted">
               <li className="flex items-center gap-2 group">
-                <Mail className="h-4 w-4 group-hover:text-foreground transition-colors" />
-                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-foreground transition-colors">shreya.mhealth@gmail.com</a>
+                <Mail className="h-4 w-4 group-hover:text-[var(--logo-teal)] transition-colors" />
+                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[var(--logo-teal)] transition-colors">shreya.mhealth@gmail.com</a>
               </li>
               <li className="flex items-center gap-2 group">
-                <MapPin className="h-4 w-4 group-hover:text-foreground transition-colors" />
+                <MapPin className="h-4 w-4 group-hover:text-[var(--logo-teal)] transition-colors" />
                 <span>Guna, Madhya Pradesh</span>
               </li>
               <li className="flex items-center gap-4 mt-4">
-                <a href="#" className="hover:text-foreground transition-colors"><Instagram className="h-5 w-5" /></a>
-                <a href="#" className="hover:text-foreground transition-colors"><Linkedin className="h-5 w-5" /></a>
+                <a href="#" className="hover:text-[var(--logo-teal)] transition-colors"><Instagram className="h-5 w-5" /></a>
+                <a href="#" className="hover:text-[var(--logo-teal)] transition-colors"><Linkedin className="h-5 w-5" /></a>
               </li>
             </ul>
           </div>
@@ -63,9 +63,9 @@ export function Footer() {
             <span className="text-xs opacity-70">Made in Bangalore, India</span>
           </div>
           <div className="flex gap-6">
-            <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
-            <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="/refund" className="hover:text-foreground transition-colors">Refund Policy</Link>
+            <Link href="/terms" className="hover:text-[var(--logo-teal)] transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-[var(--logo-teal)] transition-colors">Privacy Policy</Link>
+            <Link href="/refund" className="hover:text-[var(--logo-teal)] transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ export function Hero() {
           <div className="pt-8">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-teal)] hover:border-[var(--logo-teal)] hover:text-white transition-all shadow-none hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 bg-transparent border-2 border-[var(--logo-teal)] text-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-none hover:shadow-md hover:-translate-y-1 backdrop-blur-sm"
             >
               Begin Your Journey <ArrowRight className="w-5 h-5" />
             </button>

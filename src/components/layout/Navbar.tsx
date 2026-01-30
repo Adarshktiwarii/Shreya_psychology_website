@@ -34,7 +34,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-foreground transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-blush)] after:transition-all hover:after:w-full"
+                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[var(--logo-teal)] after:transition-all hover:after:w-full"
               >
                 {link.name}
               </Link>
@@ -43,7 +43,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:bg-secondary/20 hover:text-foreground rounded-full transition-colors"
+            className="md:hidden p-2 text-foreground hover:bg-[var(--logo-teal)]/10 hover:text-[var(--logo-teal)] rounded-full transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -60,7 +60,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-foreground transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
+                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors px-2 py-2 hover:bg-[var(--logo-teal)]/10 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

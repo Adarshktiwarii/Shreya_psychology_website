@@ -80,10 +80,10 @@ export function ForYouSection() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 key={i} 
-                className="flex flex-col p-6 bg-white rounded-2xl border border-gray-100 hover:border-[var(--logo-blush)]/30 hover:shadow-lg transition-all duration-300 group h-full"
+                className="flex flex-col p-6 bg-white rounded-2xl border border-gray-100 hover:border-[var(--logo-teal)]/30 hover:shadow-lg transition-all duration-300 group h-full"
               >
-                <div className="mb-4 p-3 bg-background rounded-full w-fit group-hover:bg-[var(--logo-blush)]/10 transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-foreground" />
+                <div className="mb-4 p-3 bg-background rounded-full w-fit group-hover:bg-[var(--logo-teal)]/10 transition-colors">
+                  <CheckCircle2 className="w-6 h-6 text-[var(--logo-teal)]" />
                 </div>
                 <span className="text-foreground font-medium leading-relaxed">{item}</span>
               </motion.li>
@@ -121,7 +121,7 @@ export function ForYouSection() {
              </p>
              <button 
                onClick={() => setIsModalOpen(true)}
-               className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full text-foreground font-medium hover:bg-[var(--logo-blush)] hover:text-white transition-all shadow-sm hover:shadow-md"
+               className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full text-foreground font-medium hover:bg-[var(--logo-teal)] hover:text-white transition-all shadow-sm hover:shadow-md"
              >
                Start Your Journey <ArrowRight className="w-4 h-4" />
              </button>

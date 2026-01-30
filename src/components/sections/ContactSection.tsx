@@ -40,8 +40,8 @@ export function ContactSection() {
             
             <div className="space-y-6">
               <div className="flex items-start gap-3 text-foreground group">
-                <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
-                  <Mail className="w-5 h-5 text-secondary-foreground" />
+                <div className="p-2 bg-[var(--logo-teal)]/10 rounded-lg group-hover:bg-[var(--logo-teal)]/20 transition-colors">
+                  <Mail className="w-5 h-5 text-[var(--logo-teal)]" />
                 </div>
                 <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-foreground transition-colors mt-1 font-medium">
                   shreya.mhealth@gmail.com
@@ -49,8 +49,8 @@ export function ContactSection() {
               </div>
               
               <div className="flex items-start gap-3 text-foreground group">
-                <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
-                  <Phone className="w-5 h-5 text-secondary-foreground" />
+                <div className="p-2 bg-[var(--logo-teal)]/10 rounded-lg group-hover:bg-[var(--logo-teal)]/20 transition-colors">
+                  <Phone className="w-5 h-5 text-[var(--logo-teal)]" />
                 </div>
                 <div className="flex flex-col mt-1">
                   <a href="tel:+918982108778" className="hover:text-foreground transition-colors font-medium">
@@ -61,8 +61,8 @@ export function ContactSection() {
               </div>
 
               <div className="flex items-start gap-3 text-foreground group">
-                <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
-                  <Clock className="w-5 h-5 text-secondary-foreground" />
+                <div className="p-2 bg-[var(--logo-teal)]/10 rounded-lg group-hover:bg-[var(--logo-teal)]/20 transition-colors">
+                  <Clock className="w-5 h-5 text-[var(--logo-teal)]" />
                 </div>
                 <div className="flex flex-col mt-1">
                   <span className="font-medium">Mon - Fri: 10:00 AM - 6:00 PM</span>
@@ -75,8 +75,8 @@ export function ContactSection() {
           <section>
             <h3 className="text-2xl font-semibold mb-4 text-foreground font-serif">Location</h3>
             <div className="flex items-start gap-3 text-foreground group">
-              <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
-                <MapPin className="w-5 h-5 text-secondary-foreground" />
+              <div className="p-2 bg-[var(--logo-teal)]/10 rounded-lg group-hover:bg-[var(--logo-teal)]/20 transition-colors">
+                <MapPin className="w-5 h-5 text-[var(--logo-teal)]" />
               </div>
               <div className="space-y-2 mt-1">
                 <p className="text-foreground-muted">Sessions are available in both in-person and online formats.</p>

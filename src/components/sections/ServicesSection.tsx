@@ -93,7 +93,7 @@ export function ServicesSection() {
           <motion.div 
             key={index} 
             variants={item}
-            className="group relative bg-white p-8 rounded-[2rem] border border-secondary/20 hover:border-transparent hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden"
+            className="group relative bg-white p-8 rounded-[2rem] border border-secondary/20 hover:border-[var(--logo-teal)]/30 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
             
@@ -110,7 +110,7 @@ export function ServicesSection() {
                   {service.subtitle}
                 </span>
               )}
-              <div className="w-12 h-1 bg-secondary/30 mb-4 rounded-full group-hover:w-20 transition-all duration-300"></div>
+              <div className="w-12 h-1 bg-[var(--logo-teal)]/30 mb-4 rounded-full group-hover:w-20 transition-all duration-300"></div>
               <p className="text-foreground-muted leading-relaxed text-lg">
                 {service.description}
               </p>

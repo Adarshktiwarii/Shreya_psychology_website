@@ -107,7 +107,7 @@ export function AboutSection() {
         className="mt-20"
       >
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-foreground mb-4">
+          <div className="inline-flex items-center justify-center p-3 bg-[var(--logo-teal)]/10 rounded-2xl text-[var(--logo-teal)] mb-4">
             <Heart className="w-6 h-6" />
           </div>
           <h3 className="text-2xl md:text-4xl font-bold font-serif text-foreground">Areas of Expertise</h3>
@@ -139,9 +139,9 @@ export function AboutSection() {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-center text-center h-full"
+              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-[var(--logo-teal)]/30 hover:shadow-primary/5 transition-all duration-300 flex flex-col items-center text-center h-full"
             >
-              <span className="text-4xl mb-6 bg-background p-4 rounded-2xl">{area.icon}</span>
+              <span className="text-4xl mb-6 bg-background text-[var(--logo-teal)] p-4 rounded-2xl">{area.icon}</span>
               <h4 className="font-bold text-lg mb-4 text-foreground">{area.title}</h4>
               <ul className="space-y-2 text-sm text-foreground-muted">
                 {area.items.map((item, i) => (
