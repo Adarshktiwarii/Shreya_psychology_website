@@ -4,37 +4,33 @@
   /* Warm Off-White */
   --background: #FAFAF7;
   
-  /* Text: Soft Grey - Adjusted to be slightly darker for better readability while maintaining the grey aesthetic.
-     Original Request: #A9A9A9 (Light Grey)
-     New Darker Shade: #757575 (Medium Grey - keeps the neutral tone but improves contrast significantly) 
-  */
-  --foreground: #757575;
+  /* Text: Dark Blue-Grey for better readability and alignment with pastel theme */
+  --foreground: #5A6B7C;
   
-  /* Muted variant for less important text (closer to original request) */
-  --foreground-muted: #A9A9A9;
+  /* Muted variant */
+  --foreground-muted: #8899A6;
   
-  /* Darker grey for essential readability (unchanged mostly, but useful for headings) */
-  --foreground-dark: #4a4a4a; 
+  /* Darker grey/blue for essential readability */
+  --foreground-dark: #2C3E50; 
   
   /* Pastel Blue */
-  --primary: #DDEFF4;
-  --primary-foreground: #4A6FA5;
+  --primary: #D4E6F1;
+  --primary-foreground: #2C3E50;
   
-  /* Soft Blush Pink - Kept as secondary/accent but reduced usage */
-  --secondary: #EAC0B8; 
+  /* Soft Blush Pink */
+  --secondary: #F4C2C2; 
   --secondary-foreground: #5D4037;
   
   /* Sage Green - Kept as accent */
   --accent: #C9DCCB;
   --accent-foreground: #2D3E2E;
 
-  /* Main Brand Color - Pastel Blue (Replacing Muted Teal usage) */
-  /* Using a readable teal/blue derived from the pastel palette for text/icons */
-  --logo-teal: #7FA9B4; 
+  /* Main Brand Color - Pastel Blue */
+  --logo-teal: #8FB8D1; 
   /* Actual background pastel blue */
-  --logo-bg-blue: #DDEFF4; 
+  --logo-bg-blue: #D4E6F1; 
   /* Soft Blush for secondary brand elements */
-  --logo-blush: #EAC0B8; 
+  --logo-blush: #F4C2C2; 
 }
 
 @theme inline {
