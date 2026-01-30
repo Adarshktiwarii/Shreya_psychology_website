@@ -18,7 +18,7 @@ export function ContactSection() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[var(--logo-blush)] font-serif">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground font-serif">
           Contact
         </h2>
       </motion.div>
@@ -33,7 +33,7 @@ export function ContactSection() {
         >
           {/* ... existing contact details ... */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-[var(--logo-blush)] font-serif">Get in Touch</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-secondary-foreground font-serif">Get in Touch</h3>
             <p className="text-foreground-muted mb-6">
               If you have any questions or would like to schedule a consultation, please feel free to reach out.
             </p>
@@ -43,7 +43,7 @@ export function ContactSection() {
                 <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
                   <Mail className="w-5 h-5 text-secondary-foreground" />
                 </div>
-                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[var(--logo-blush)] transition-colors mt-1 font-medium">
+                <a href="mailto:shreya.mhealth@gmail.com" className="hover:text-[var(--logo-teal)] transition-colors mt-1 font-medium">
                   shreya.mhealth@gmail.com
                 </a>
               </div>
@@ -53,7 +53,7 @@ export function ContactSection() {
                   <Phone className="w-5 h-5 text-secondary-foreground" />
                 </div>
                 <div className="flex flex-col mt-1">
-                  <a href="tel:+918982108778" className="hover:text-[var(--logo-blush)] transition-colors font-medium">
+                  <a href="tel:+918982108778" className="hover:text-[var(--logo-teal)] transition-colors font-medium">
                     +91 8982108778
                   </a>
                   <span className="text-sm text-foreground-muted">(Available on WhatsApp)</span>
@@ -73,7 +73,7 @@ export function ContactSection() {
           </section>
 
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-[var(--logo-blush)] font-serif">Location</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-secondary-foreground font-serif">Location</h3>
             <div className="flex items-start gap-3 text-foreground group">
               <div className="p-2 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
                 <MapPin className="w-5 h-5 text-secondary-foreground" />
