@@ -1,6 +1,39 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export function LotusLogo({ className }: { className?: string }) {
+interface LotusLogoProps {
+  className?: string;
+  variant?: "vertical" | "crescent";
+  asImage?: boolean;
+}
+
+export function LotusLogo({ className, variant = "crescent", asImage = false }: LotusLogoProps) {
+  if (asImage) {
+    if (variant === "vertical") {
+      return (
+        <Image
+          src="/logo-vertical.svg"
+          alt="ManoArohan Logo"
+          width={40}
+          height={40}
+          className={cn("w-10 h-10", className)}
+          priority
+        />
+      );
+    }
+
+    return (
+      <Image
+        src="/logo-crescent.svg"
+        alt="ManoArohan Logo"
+        width={40}
+        height={40}
+        className={cn("w-10 h-10", className)}
+        priority
+      />
+    );
+  }
+
   return (
     <svg
       viewBox="0 0 200 200"
@@ -8,50 +41,62 @@ export function LotusLogo({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       className={cn("w-10 h-10", className)}
     >
-      {/* Sun rays */}
-      <g stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-        <path d="M100 20 V35" />
-        <path d="M100 20" transform="rotate(30 100 65)" />
-        <path d="M100 20" transform="rotate(-30 100 65)" />
-        <path d="M100 20" transform="rotate(60 100 65)" />
-        <path d="M100 20" transform="rotate(-60 100 65)" />
-      </g>
-      
-      {/* Sun arc */}
-      <path 
-        d="M80 65 A 20 20 0 0 1 120 65" 
-        stroke="currentColor" 
-        strokeWidth="2" 
+      {/* Circle arc - opens to the left */}
+      <path
+        d="M 49 129 A 72 72 0 1 1 67 29"
+        stroke="currentColor"
+        strokeWidth="1.8"
         strokeLinecap="round"
+        fill="none"
       />
 
-      {/* Lotus Petals */}
-      <g stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        {/* Center Petal */}
-        <path d="M100 130 C100 130 85 100 100 65 C115 100 100 130 100 130" />
-        
-        {/* Inner Side Petals */}
-        <path d="M100 130 C100 130 75 110 80 80 C80 80 100 100 100 130" />
-        <path d="M100 130 C100 130 125 110 120 80 C120 80 100 100 100 130" />
+      {/* Half Sun with rays */}
+      <g transform="translate(90, 40)">
+        <path d="M-10 0 A 10 10 0 0 1 10 0" stroke="currentColor" strokeWidth="1.8" fill="none" />
+        <g stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+          <line x1="0" y1="-3" x2="0" y2="-12" />
+          <line x1="7" y1="-1" x2="12" y2="-8" />
+          <line x1="-7" y1="-1" x2="-12" y2="-8" />
+          <line x1="12" y1="3" x2="18" y2="0" />
+          <line x1="-12" y1="3" x2="-18" y2="0" />
+        </g>
+      </g>
 
-        {/* Middle Side Petals */}
-        <path d="M100 130 C100 130 60 115 65 90 C65 90 90 110 100 130" />
-        <path d="M100 130 C100 130 140 115 135 90 C135 90 110 110 100 130" />
+      {/* Lotus Flower */}
+      <g transform="translate(76, 96) scale(0.6)" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
+        {/* Center petal outer */}
+        <path d="M0 10 C-3 -5 -8 -32 0 -48 C8 -32 3 -5 0 10" />
+        {/* Center petal inner */}
+        <path d="M0 5 C-2 -3 -5 -22 0 -35 C5 -22 2 -3 0 5" />
 
-        {/* Outer Side Petals */}
-        <path d="M100 130 C100 130 40 125 45 105 C45 105 80 120 100 130" />
-        <path d="M100 130 C100 130 160 125 155 105 C155 105 120 120 100 130" />
-        
-        {/* Bottom Petals (Horizontal) */}
-        <path d="M100 130 C100 130 50 140 45 125 C45 125 70 135 100 130" />
-        <path d="M100 130 C100 130 150 140 155 125 C155 125 130 135 100 130" />
+        {/* First pair outer */}
+        <path d="M0 10 C-5 -2 -20 -16 -24 -34 C-13 -20 -3 -2 0 10" />
+        <path d="M0 10 C5 -2 20 -16 24 -34 C13 -20 3 -2 0 10" />
+        {/* First pair inner */}
+        <path d="M0 5 C-3 -1 -14 -11 -17 -25 C-9 -14 -2 -1 0 5" />
+        <path d="M0 5 C3 -1 14 -11 17 -25 C9 -14 2 -1 0 5" />
+
+        {/* Second pair outer */}
+        <path d="M0 10 C-8 2 -32 -6 -38 -22 C-24 -10 -5 3 0 10" />
+        <path d="M0 10 C8 2 32 -6 38 -22 C24 -10 5 3 0 10" />
+        {/* Second pair inner */}
+        <path d="M0 5 C-5 1 -24 -4 -30 -16 C-18 -6 -3 2 0 5" />
+        <path d="M0 5 C5 1 24 -4 30 -16 C18 -6 3 2 0 5" />
+
+        {/* Third pair (outer petals) */}
+        <path d="M0 10 C-12 6 -46 2 -52 -12 C-36 -2 -8 6 0 10" />
+        <path d="M0 10 C12 6 46 2 52 -12 C36 -2 8 6 0 10" />
+
+        {/* Outermost leaves */}
+        <path d="M0 12 C-16 10 -56 14 -64 2 C-42 8 -10 10 0 12" />
+        <path d="M0 12 C16 10 56 14 64 2 C42 8 10 10 0 12" />
       </g>
 
       {/* Dots below */}
       <g fill="currentColor">
-        <circle cx="100" cy="145" r="3" />
-        <circle cx="100" cy="155" r="2" />
-        <circle cx="100" cy="162" r="1.5" />
+        <circle cx="76" cy="140" r="3" />
+        <circle cx="76" cy="152" r="2.2" />
+        <circle cx="76" cy="162" r="1.5" />
       </g>
     </svg>
   );

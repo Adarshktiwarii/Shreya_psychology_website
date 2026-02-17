@@ -28,9 +28,8 @@
   --accent: #C9DCCB;
   --accent-foreground: #2D3E2E;
 
-  /* Main Brand Color - Pastel Blue (Replacing Muted Teal usage) */
-  /* Using a readable teal/blue derived from the pastel palette for text/icons */
-  --logo-teal: #7FA9B4; 
+  /* Main Brand Color - Muted Teal (matches logo) */
+  --logo-teal: #5A8A8A; 
   /* Actual background pastel blue */
   --logo-bg-blue: #DDEFF4; 
   /* Soft Blush for secondary brand elements */
