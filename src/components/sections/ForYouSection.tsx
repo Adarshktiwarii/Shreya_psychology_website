@@ -5,17 +5,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { BookingModal } from "@/components/booking/BookingModal";
 
-import { LotusLogo } from "@/components/layout/Logo";
-
 export function ForYouSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section id="for-you" className="relative container mx-auto px-4 py-16 max-w-5xl scroll-mt-20 overflow-hidden">
-      {/* Watermark for this section */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none opacity-[0.05]">
-        <LotusLogo variant="crescent" className="w-[800px] h-[800px] text-[var(--logo-teal)]" />
-      </div>
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +101,7 @@ export function ForYouSection() {
                 Therapy here is not about rushing to conclusions or fitting you into a box. It is a collaborative process of understanding your experiences - gently and thoughtfully.
               </p>
               <p>
-                If a clincial concern is present, it can be explored ethically and carefully, with the aim of clarity, self-awareness and appropriate care.
+                If a clinical concern is present, it can be explored ethically and carefully, with the aim of clarity, self-awareness and appropriate care.
               </p>
             </div>
           </div>
