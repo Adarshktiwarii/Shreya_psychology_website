@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  /* Soft Blush Pink Background - As requested */
+  --background: #FFF0F5; 
+  
+  /* Text: Charcoal - As requested for main text color */
+  --foreground: #36454F;
+  
+  /* Muted variant for less important text */
+  --foreground-muted: #55606A;
+  
+  /* Darker charcoal/black for essential readability */
+  --foreground-dark: #1C2833; 
+  
+  /* Pastel Blue */
+  --primary: #D4E6F1;
+  --primary-foreground: #2C3E50;
+  
+  /* Soft Blush Pink - Slightly darker for accents on blush background */
+  --secondary: #F8C8DC; 
+  --secondary-foreground: #5D4037;
+  
+  /* Sage Green - Kept as accent */
+  --accent: #C9DCCB;
+  --accent-foreground: #2D3E2E;
+
+  /* Main Brand Color - Muted Teal (matches logo) */
+  --logo-teal: #5A8A8A; 
+  /* Soft background teal */
+  --logo-bg-blue: #D4E6F1; 
+  /* Soft Blush for secondary brand elements */
+  --logo-blush: #F4C2C2; 
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-dark: var(--foreground-dark);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-logo-teal: var(--logo-teal);
+  --color-logo-blush: var(--logo-blush);
+  
+  --font-serif: var(--font-libre-baskerville), serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif);
+}
+
+/* Strictly enforce font family everywhere */
+* {
+  font-family: var(--font-serif) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+}
+
+p, span, li, a, button, input, textarea, div {
+  font-weight: 400 !important;
+}
