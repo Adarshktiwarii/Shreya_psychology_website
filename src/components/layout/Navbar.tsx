@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { LotusLogo } from "@/components/layout/Logo";
 
 const navLinks = [
@@ -22,7 +21,12 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <LotusLogo variant="vertical" className="h-10 w-10 text-[var(--logo-teal)] transition-transform group-hover:scale-105 group-hover:text-foreground duration-300" />
+            <div className="hidden md:block">
+              <LotusLogo className="h-10 w-10 transition-transform group-hover:scale-105 duration-300" />
+            </div>
+            <div className="md:hidden">
+              <LotusLogo className="h-12 w-12 transition-transform group-hover:scale-105 duration-300" />
+            </div>
             <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-foreground transition-colors duration-300">
               ManoArohan
             </span>

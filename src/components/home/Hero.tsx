@@ -11,12 +11,6 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden py-16 md:py-28 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary/20 via-background to-background">
-      {/* Background Watermark - Optimized for aesthetic appeal (Desktop Only) */}
-      <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none overflow-hidden z-0">
-         {/* Main Logo as central graphic element instead of just a watermark */}
-         <LotusLogo variant="crescent" className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] text-[var(--logo-teal)] opacity-[0.15]" />
-      </div>
-
       <div className="container relative z-10 mx-auto px-4 md:px-6 text-center max-w-full overflow-hidden">
         {/* Mobile Logo Display */}
         <motion.div 
