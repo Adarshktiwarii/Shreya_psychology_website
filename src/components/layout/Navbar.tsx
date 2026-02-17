@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { LotusLogo } from "@/components/layout/Logo";
 
 const navLinks = [
@@ -22,8 +21,13 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <LotusLogo className="h-10 w-10 text-[var(--logo-teal)] transition-transform group-hover:scale-105 duration-300" />
-            <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-primary-foreground transition-colors duration-300">
+            <div className="hidden md:block">
+              <LotusLogo className="h-10 w-10 transition-transform group-hover:scale-105 duration-300" />
+            </div>
+            <div className="md:hidden">
+              <LotusLogo className="h-12 w-12 transition-transform group-hover:scale-105 duration-300" />
+            </div>
+            <span className="text-2xl font-bold text-foreground tracking-tight group-hover:text-foreground transition-colors duration-300">
               ManoArohan
             </span>
           </Link>
@@ -43,7 +47,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:bg-secondary/20 rounded-full transition-colors"
+            className="md:hidden p-2 text-foreground hover:bg-[var(--logo-teal)]/10 hover:text-[var(--logo-teal)] rounded-full transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -60,7 +64,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors px-2 py-2 hover:bg-secondary/10 rounded-lg"
+                className="text-lg font-medium text-foreground hover:text-[var(--logo-teal)] transition-colors px-2 py-2 hover:bg-[var(--logo-teal)]/10 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

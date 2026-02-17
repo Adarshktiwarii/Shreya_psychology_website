@@ -2,22 +2,16 @@
 
 import { Award, Heart } from "lucide-react";
 import { motion } from "framer-motion";
-import { LotusLogo } from "@/components/layout/Logo";
-
 export function AboutSection() {
   return (
     <section id="about" className="relative container mx-auto px-4 py-16 max-w-5xl scroll-mt-20 overflow-hidden">
-      {/* Watermark for this section */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none opacity-[0.05]">
-        <LotusLogo className="w-[900px] h-[900px] text-[var(--logo-teal)]" />
-      </div>
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="text-[var(--logo-teal)] font-medium text-base uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
+        <span className="text-foreground font-medium text-base uppercase tracking-wider mb-2 block">Licensed Clinical Psychologist</span>
         <h2 className="text-3xl md:text-5xl font-bold text-foreground font-serif">
           About Me
         </h2>
@@ -35,7 +29,7 @@ export function AboutSection() {
           <div className="relative">
              <div className="absolute -left-6 -top-6 w-20 h-20 bg-primary/20 rounded-full blur-2xl -z-10"></div>
              <p className="text-2xl md:text-3xl font-serif text-secondary-foreground leading-tight">
-              Hi, I'm <span className="text-[var(--logo-teal)]">Shreya Raghuwanshi</span>.
+              Hi, I'm <span className="text-foreground">Shreya Raghuwanshi</span>.
              </p>
           </div>
           
@@ -44,7 +38,7 @@ export function AboutSection() {
               With training in evidence-based psychological interventions, I work with diverse populations using a client-centered, non-judgemental, and collaborative approach.
             </p>
             <p>
-              My work integrates clinical expertise with a deep respect for each person’s lived experience. Therapy at <span className="font-semibold text-[var(--logo-teal)]">ManoArohan</span> is approached with confidentiality, autonomy, and clinical responsibility.
+              My work integrates clinical expertise with a deep respect for each person’s lived experience. Therapy at <span className="font-semibold text-foreground">ManoArohan</span> is approached with confidentiality, autonomy, and clinical responsibility.
             </p>
             <div className="bg-gradient-to-br from-white to-background p-6 rounded-2xl border-l-4 border-[var(--logo-teal)] shadow-sm my-8">
               <p className="italic text-foreground-muted m-0">
@@ -82,7 +76,7 @@ export function AboutSection() {
                   "Training in School Counselling"
                 ].map((cert, i) => (
                   <li key={i} className="flex gap-4 group">
-                    <div className="mt-1.5 w-2 h-2 rounded-full bg-[var(--logo-teal)] shrink-0 group-hover:scale-125 transition-transform" />
+                    <div className="mt-1.5 w-2 h-2 rounded-full bg-[var(--logo-blush)] shrink-0 group-hover:scale-125 transition-transform" />
                     <div className="flex flex-col">
                       <span className="font-medium text-foreground text-sm md:text-base">
                         {typeof cert === 'string' ? cert : cert.text}
@@ -107,7 +101,7 @@ export function AboutSection() {
         className="mt-20"
       >
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-2xl text-[var(--logo-teal)] mb-4">
+          <div className="inline-flex items-center justify-center p-3 bg-[var(--logo-teal)]/10 rounded-2xl text-[var(--logo-teal)] mb-4">
             <Heart className="w-6 h-6" />
           </div>
           <h3 className="text-2xl md:text-4xl font-bold font-serif text-foreground">Areas of Expertise</h3>
@@ -139,9 +133,9 @@ export function AboutSection() {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 flex flex-col items-center text-center h-full"
+              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-[var(--logo-teal)]/30 hover:shadow-primary/5 transition-all duration-300 flex flex-col items-center text-center h-full"
             >
-              <span className="text-4xl mb-6 bg-background p-4 rounded-2xl">{area.icon}</span>
+              <span className="text-4xl mb-6 bg-background text-[var(--logo-teal)] p-4 rounded-2xl">{area.icon}</span>
               <h4 className="font-bold text-lg mb-4 text-foreground">{area.title}</h4>
               <ul className="space-y-2 text-sm text-foreground-muted">
                 {area.items.map((item, i) => (

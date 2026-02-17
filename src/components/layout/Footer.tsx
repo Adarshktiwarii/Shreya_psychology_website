@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2 group">
-              <LotusLogo className="h-8 w-8 text-[var(--logo-teal)] group-hover:scale-110 transition-transform duration-300" />
+              <LotusLogo className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
               <span className="text-xl font-bold text-foreground">ManoArohan</span>
             </Link>
             <p className="text-sm text-foreground-muted">
@@ -57,7 +57,11 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-foreground-muted gap-4">
-          <span>© {new Date().getFullYear()} ManoArohan. All rights reserved.</span>
+          <div className="flex flex-col gap-1 md:text-left text-center">
+            <span>© {new Date().getFullYear()} ManoArohan. All rights reserved.</span>
+            <span className="text-xs opacity-70">Designed and developed by Adarsh & Consultants</span>
+            <span className="text-xs opacity-70">Made in Bangalore, India</span>
+          </div>
           <div className="flex gap-6">
             <Link href="/terms" className="hover:text-[var(--logo-teal)] transition-colors">Terms of Service</Link>
             <Link href="/privacy" className="hover:text-[var(--logo-teal)] transition-colors">Privacy Policy</Link>
