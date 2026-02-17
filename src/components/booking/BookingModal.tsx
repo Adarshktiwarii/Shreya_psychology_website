@@ -52,13 +52,34 @@ const selectClass = "w-full px-3 py-2 rounded-lg border border-gray-200 focus:bo
 export function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSuccess(true);
+    setError("");
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xpqjrvvw", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setIsSuccess(true);
+        form.reset();
+      } else {
+        setError("Something went wrong. Please try again or contact us directly.");
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -95,21 +116,21 @@ export function BookingForm() {
         <div className="grid grid-cols-2 md:grid-cols-[1fr_80px_1fr] gap-3">
           <div className="space-y-1 col-span-2 md:col-span-1">
             <label htmlFor="form-name" className={labelClass}>Full Name <span className="text-red-400">*</span></label>
-            <input type="text" id="form-name" required className={inputClass} placeholder="Your full name" />
+            <input type="text" id="form-name" name="Full Name" required className={inputClass} placeholder="Your full name" />
           </div>
           <div className="space-y-1">
             <label htmlFor="form-age" className={labelClass}>Age <span className="text-red-400">*</span></label>
-            <input type="number" id="form-age" required min="5" max="120" className={inputClass} placeholder="Age" />
+            <input type="number" id="form-age" name="Age" required min="5" max="120" className={inputClass} placeholder="Age" />
           </div>
           <div className="space-y-1">
             <label htmlFor="form-gender" className={labelClass}>Gender <span className="text-red-400">*</span></label>
-            <select id="form-gender" required className={selectClass}>
+            <select id="form-gender" name="Gender" required className={selectClass}>
               <option value="">Select</option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="non-binary">Non-binary</option>
-              <option value="prefer-not-to-say">Prefer not to say</option>
-              <option value="other">Other</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Non-binary">Non-binary</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+              <option value="Other">Other</option>
             </select>
           </div>
         </div>
@@ -118,11 +139,11 @@ export function BookingForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="space-y-1">
             <label htmlFor="form-occupation" className={labelClass}>Occupation / Education <span className="text-red-400">*</span></label>
-            <input type="text" id="form-occupation" required className={inputClass} placeholder="e.g. Student, Professional" />
+            <input type="text" id="form-occupation" name="Occupation / Educational Status" required className={inputClass} placeholder="e.g. Student, Professional" />
           </div>
           <div className="space-y-1">
             <label htmlFor="form-phone" className={labelClass}>Contact Number <span className="text-red-400">*</span></label>
-            <input type="tel" id="form-phone" required className={inputClass} placeholder="+91..." />
+            <input type="tel" id="form-phone" name="Contact Number" required className={inputClass} placeholder="+91..." />
           </div>
         </div>
 
@@ -130,11 +151,11 @@ export function BookingForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="space-y-1">
             <label htmlFor="form-email" className={labelClass}>Email <span className="text-red-400">*</span></label>
-            <input type="email" id="form-email" required className={inputClass} placeholder="your@email.com" />
+            <input type="email" id="form-email" name="Email" required className={inputClass} placeholder="your@email.com" />
           </div>
           <div className="space-y-1">
             <label htmlFor="form-address" className={labelClass}>Address <span className="text-foreground-muted text-[10px]">(optional)</span></label>
-            <input type="text" id="form-address" className={inputClass} placeholder="City, State" />
+            <input type="text" id="form-address" name="Address" className={inputClass} placeholder="City, State" />
           </div>
         </div>
 
@@ -145,6 +166,7 @@ export function BookingForm() {
           <label htmlFor="form-concern" className={labelClass}>Presenting Concerns <span className="text-red-400">*</span></label>
           <textarea
             id="form-concern"
+            name="Presenting Concerns"
             rows={2}
             required
             className={`${inputClass} resize-none`}
@@ -156,21 +178,21 @@ export function BookingForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="space-y-1">
             <label htmlFor="form-prior-therapy" className={labelClass}>Sought therapy before? <span className="text-red-400">*</span></label>
-            <select id="form-prior-therapy" required className={selectClass}>
+            <select id="form-prior-therapy" name="Prior Therapy/Counselling" required className={selectClass}>
               <option value="">Select</option>
-              <option value="no">No, first time</option>
-              <option value="yes-past">Yes, in the past</option>
-              <option value="yes-current">Yes, currently</option>
+              <option value="No, first time">No, first time</option>
+              <option value="Yes, in the past">Yes, in the past</option>
+              <option value="Yes, currently in therapy">Yes, currently</option>
             </select>
           </div>
           <div className="space-y-1">
             <label htmlFor="form-medical" className={labelClass}>Under psychiatric/medical treatment? <span className="text-red-400">*</span></label>
-            <select id="form-medical" required className={selectClass}>
+            <select id="form-medical" name="Psychiatric/Medical Treatment" required className={selectClass}>
               <option value="">Select</option>
-              <option value="no">No</option>
-              <option value="yes-psychiatric">Yes, psychiatric</option>
-              <option value="yes-medical">Yes, medical</option>
-              <option value="yes-both">Yes, both</option>
+              <option value="No">No</option>
+              <option value="Yes, psychiatric">Yes, psychiatric</option>
+              <option value="Yes, medical">Yes, medical</option>
+              <option value="Yes, both">Yes, both</option>
             </select>
           </div>
         </div>
@@ -181,24 +203,29 @@ export function BookingForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="space-y-1">
             <label htmlFor="form-session-mode" className={labelClass}>Session Mode <span className="text-red-400">*</span></label>
-            <select id="form-session-mode" required className={selectClass}>
+            <select id="form-session-mode" name="Session Mode" required className={selectClass}>
               <option value="">Select</option>
-              <option value="online">Online</option>
-              <option value="offline">Offline (In-person)</option>
-              <option value="no-preference">No preference</option>
+              <option value="Online">Online</option>
+              <option value="Offline (In-person)">Offline (In-person)</option>
+              <option value="No preference">No preference</option>
             </select>
           </div>
           <div className="space-y-1">
             <label htmlFor="form-time" className={labelClass}>Time Preference <span className="text-red-400">*</span></label>
-            <select id="form-time" required className={selectClass}>
+            <select id="form-time" name="Time Preference" required className={selectClass}>
               <option value="">Select</option>
-              <option value="morning">Morning (10–12 PM)</option>
-              <option value="afternoon">Afternoon (12–3 PM)</option>
-              <option value="evening">Evening (3–6 PM)</option>
-              <option value="flexible">Flexible</option>
+              <option value="Morning (10–12 PM)">Morning (10–12 PM)</option>
+              <option value="Afternoon (12–3 PM)">Afternoon (12–3 PM)</option>
+              <option value="Evening (3–6 PM)">Evening (3–6 PM)</option>
+              <option value="Flexible">Flexible</option>
             </select>
           </div>
         </div>
+
+        {/* Error message */}
+        {error && (
+          <p className="text-xs text-red-500 text-center bg-red-50 py-2 rounded-lg">{error}</p>
+        )}
 
         {/* Submit */}
         <button
